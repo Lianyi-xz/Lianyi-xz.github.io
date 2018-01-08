@@ -2,8 +2,8 @@
 <search>
   <entry>
     <title><![CDATA[First Blog]]></title>
-    <url>%2FFirst%20Hexo%20Blog.html</url>
-    <content type="text"><![CDATA[创建个人博客win 10安装Hexo 安装 git 安装 node.js 安装Hexo 123#git bashnpm install hexo-cli -ghexo -v Hexo设置 hexo初始化hexo init Blog git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next 参考文件NexT主题文档NexT第三方服务分类和标签底部动画NexT个性化ookamiantd.top]]></content>
+    <url>%2FFirst_Hexo_Blog.html</url>
+    <content type="text"><![CDATA[创建个人博客win 10安装Hexo 安装 git 安装 node.js 安装Hexo 123#git bashnpm install hexo-cli -ghexo -v Hexo设置 hexo初始化12hexo init Bloggit clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next 参考文件NexT主题文档NexT第三方服务分类和标签底部动画NexT个性化ookamiantd.tophexo+github]]></content>
       <tags>
         <tag>Hexo相关</tag>
       </tags>

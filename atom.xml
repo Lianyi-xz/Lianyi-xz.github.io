@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-08T09:25:16.829Z</updated>
+  <updated>2018-01-08T10:18:03.109Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>First Blog</title>
-    <link href="http://yoursite.com/First%20Hexo%20Blog.html"/>
-    <id>http://yoursite.com/First Hexo Blog.html</id>
-    <published>2018-01-08T09:25:16.828Z</published>
-    <updated>2018-01-08T09:25:16.829Z</updated>
+    <link href="http://yoursite.com/First_Hexo_Blog.html"/>
+    <id>http://yoursite.com/First_Hexo_Blog.html</id>
+    <published>2018-01-08T10:18:03.108Z</published>
+    <updated>2018-01-08T10:18:03.109Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="创建个人博客"><a href="#创建个人博客" class="headerlink" title="创建个人博客"></a>创建个人博客</h2><h3 id="win-10安装Hexo"><a href="#win-10安装Hexo" class="headerlink" title="win 10安装Hexo"></a>win 10安装Hexo</h3><ul><li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a></li><li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></li><li>安装<code>Hexo</code>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>git bash</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li></ul><a id="more"></a><h3 id="Hexo设置"><a href="#Hexo设置" class="headerlink" title="Hexo设置"></a>Hexo设置</h3><ol><li>hexo初始化<br><code>hexo init Bloggit clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</code></li></ol><h4 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h4><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT主题文档</a><br><a href="http://theme-next.iissnan.com/third-party-services.html#algolia-search" target="_blank" rel="noopener">NexT第三方服务</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="noopener">分类和标签</a><br><a href="https://leaferx.online/2017/01/30/Bottomheart/" target="_blank" rel="noopener">底部动画</a><br><a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">NexT个性化</a><br><a href="http://ookamiantd.top/2017/build-blog-hexo-base/" target="_blank" rel="noopener">ookamiantd.top</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="创建个人博客"><a href="#创建个人博客" class="headerlink" title="创建个人博客"></a>创建个人博客</h2><h3 id="win-10安装Hexo"><a href="#win-10安装Hexo" class="headerlink" title="win 10安装Hexo"></a>win 10安装Hexo</h3><ul><li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a></li><li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></li><li>安装<code>Hexo</code>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>git bash</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li></ul><a id="more"></a><h3 id="Hexo设置"><a href="#Hexo设置" class="headerlink" title="Hexo设置"></a>Hexo设置</h3><ol><li>hexo初始化<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init Blog</span><br><span class="line">git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></li></ol><h4 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h4><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT主题文档</a><br><a href="http://theme-next.iissnan.com/third-party-services.html#algolia-search" target="_blank" rel="noopener">NexT第三方服务</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="noopener">分类和标签</a><br><a href="https://leaferx.online/2017/01/30/Bottomheart/" target="_blank" rel="noopener">底部动画</a><br><a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">NexT个性化</a><br><a href="http://ookamiantd.top/2017/build-blog-hexo-base/" target="_blank" rel="noopener">ookamiantd.top</a><br><a href="https://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener">hexo+github</a></p>]]></content>
     
     <summary type="html">
     
