@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-09T01:59:55.248Z</updated>
+  <updated>2018-01-10T08:43:12.192Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,171 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shell 重定向与管道</title>
+    <link href="http://yoursite.com/Shell_pipline.html"/>
+    <id>http://yoursite.com/Shell_pipline.html</id>
+    <published>2018-01-10T08:43:12.189Z</published>
+    <updated>2018-01-10T08:43:12.192Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="数据重定向"><a href="#数据重定向" class="headerlink" title="数据重定向"></a>数据重定向</h3><blockquote><p>标准输入stdin：代码为0，使用&lt;或&lt;&lt;<br> 准输出stdout：代码为1，使用&gt;或&gt;&gt;<br> 标准错误输出stderr：代码为2，使用2&gt;或2&gt;&gt;<br>>输出到一个已存在的文件中，那个文件就会被覆盖掉<br>>&gt;输出到一个已存在的文件中，数据会在文件最下方累加进去  </p><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>find /home -name .bashrc 2&gt; /dev/null     stderr被丢弃<br>find /home -name .bashrc &amp;&gt; /dev/null    所有输出被丢弃  </p></blockquote><p>命令执行的判断依据 <code>； &amp;&amp; ||</code><br><a id="more"></a></p><h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><blockquote><p>仅处理经由前面一个命令传来的正确信息</p></blockquote><ul><li><p>选取命令cut，grep</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cut -dfc</span><br><span class="line">  -d    后跟分割符号</span><br><span class="line">  -f     依据-d的分割字符将遗传信息分割成数段，-f取出第几段  -f 3  -f 3,5</span><br><span class="line">  -c     以字符的单位取出固定字符区间    12-   12-20</span><br><span class="line"></span><br><span class="line">grep -acinv <span class="string">'查找字符串'</span> filename</span><br><span class="line">  -a   将二进制文件以txt文件的方式查找 </span><br><span class="line">  -c   计算找到<span class="string">'查找字符串'</span>的次数</span><br><span class="line">  -i    忽略大小写</span><br><span class="line">  -n   输出行号</span><br><span class="line">  -v   反向选择，输出没有<span class="string">'查找字符串'</span>内容的行</span><br></pre></td></tr></table></figure></li><li><p>排序命令 sort、wc、uniq</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sort -fbMnrtuk [file or stdin]</span><br><span class="line">  -f      忽略大小写差异</span><br><span class="line">  -b     忽略最前端空格</span><br><span class="line">  -M    以月份来排序</span><br><span class="line">  -n     使用纯数字进行排序，默认以文字类型来排序</span><br><span class="line">  -r      反向排序</span><br><span class="line">  -u     uniq 相同的数据仅出现一行代表</span><br><span class="line">  -t      分隔符，默认是用Tab键来分隔</span><br><span class="line">  -k     以那个区间[field]来进行排序的意思</span><br><span class="line"></span><br><span class="line">wc  -lwm</span><br><span class="line">  -l        仅列出行</span><br><span class="line">  -w      仅列出多少字</span><br><span class="line">  -m     多少字符</span><br><span class="line"></span><br><span class="line">uniq -ic</span><br><span class="line">  -i       忽略大小写</span><br><span class="line">  -c      进行计数</span><br></pre></td></tr></table></figure></li></ul><ul><li><p>双向重定向 tee</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tee</span><br><span class="line">  同时将数据流送与文件与屏幕</span><br></pre></td></tr></table></figure></li><li><p>字符转换命令 tr、col、join、paste、expand</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">tr -ds set1 ...</span><br><span class="line">  -d      删除信息中set1这个字符串</span><br><span class="line">  -s       替换掉重复的字符       </span><br><span class="line"></span><br><span class="line">col -xb</span><br><span class="line">  -x      将tab键转化成对等的空格键</span><br><span class="line">  -b      在文字中有/时，仅保留/最后接的字符</span><br><span class="line"></span><br><span class="line">join -ti12 file1 file2</span><br><span class="line">  -t      默认以空格符分隔数据，并对比第一个字段的数据，若两个文件相同，则将两条数据连成一行</span><br><span class="line">  -i       忽略大小写差异</span><br><span class="line">  -1      代表第一个文件要用那个字段来分析</span><br><span class="line">  -2      代表第二个文件要用那个字段来分析</span><br><span class="line"></span><br><span class="line">paste -d file1 file2  直接将两行贴在一起，中间用tab隔开</span><br><span class="line">  -d       分隔符号，默认tab</span><br><span class="line">  -         若file写成-，表示来自stdin 的数据</span><br><span class="line"></span><br><span class="line">expand -t file</span><br><span class="line">  -t         将tab转化成空格键，一般 一个tab可用8个空格键替换，也可以自定义一个tab代表多少字符</span><br></pre></td></tr></table></figure></li><li><p>切割命令 split</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">split -bl file PREFIX</span><br><span class="line">  -b        跟准备切割成的文件大小，可加单位，例如b,k,m等等</span><br><span class="line">  -l         以行数来切割</span><br><span class="line">  PREFIX    代表前导符，可作为切割文件的前导文字</span><br></pre></td></tr></table></figure></li><li><p>参数代换 xargs</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">很多命令不支持管道命令，因此可以通过xargs 来提供该命令引用stdin只用</span><br><span class="line">xargs -0pen  <span class="built_in">command</span></span><br><span class="line">  -0        输入的stdin中的特殊字符转化为一般字符</span><br><span class="line">  -p        在执行每个命令的参数时，都会询问用户的意思     </span><br><span class="line">  -e        end of file的意思</span><br><span class="line">  -n        次数，每次<span class="built_in">command</span>命令执行，要使用几个参数的意思</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">'--help'</span> | xargs cat</span><br></pre></td></tr></table></figure></li><li><p>减号 -</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在管道中前一个命令的stdout可以作为这次的stdin，该stdin与stdout可以利用减号 - 来替代</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;数据重定向&quot;&gt;&lt;a href=&quot;#数据重定向&quot; class=&quot;headerlink&quot; title=&quot;数据重定向&quot;&gt;&lt;/a&gt;数据重定向&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;标准输入stdin：代码为0，使用&amp;lt;或&amp;lt;&amp;lt;&lt;br&gt; 准输出stdout：代码为1，使用&amp;gt;或&amp;gt;&amp;gt;&lt;br&gt; 标准错误输出stderr：代码为2，使用2&amp;gt;或2&amp;gt;&amp;gt;&lt;br&gt;&gt;输出到一个已存在的文件中，那个文件就会被覆盖掉&lt;br&gt;&gt;&amp;gt;输出到一个已存在的文件中，数据会在文件最下方累加进去  &lt;/p&gt;
+&lt;h4 id=&quot;案例&quot;&gt;&lt;a href=&quot;#案例&quot; class=&quot;headerlink&quot; title=&quot;案例&quot;&gt;&lt;/a&gt;案例&lt;/h4&gt;&lt;p&gt;find /home -name .bashrc 2&amp;gt; /dev/null     stderr被丢弃&lt;br&gt;find /home -name .bashrc &amp;amp;&amp;gt; /dev/null    所有输出被丢弃  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;命令执行的判断依据 &lt;code&gt;； &amp;amp;&amp;amp; ||&lt;/code&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Shell" scheme="http://yoursite.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shell 变量</title>
+    <link href="http://yoursite.com/Shell_var.html"/>
+    <id>http://yoursite.com/Shell_var.html</id>
+    <published>2018-01-10T08:31:20.547Z</published>
+    <updated>2018-01-10T08:31:20.548Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><ol><li>变量与内容使用 <code>=</code>号连接，<code>=</code>两边不加空格</li><li>变量名仅以英文和数字命名，且英文开头</li><li>转义字符<code>\</code>,将特殊字符转换为一般字符</li><li>${命令}为其它命令提供信息</li><li>${变量}累加内容<a id="more"></a></li></ol><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看环境变量</span></span><br><span class="line">  env</span><br><span class="line"><span class="comment">#查看所有变量</span></span><br><span class="line">  <span class="built_in">set</span></span><br><span class="line"><span class="comment">#查看所支持的语系</span></span><br><span class="line">  locale</span><br><span class="line"><span class="comment">#以树状图显示进程之间的关系</span></span><br><span class="line">  pstree</span><br><span class="line"><span class="comment">#声明变量类型</span></span><br><span class="line">  <span class="built_in">declare</span>/<span class="built_in">typeset</span> -a 数组 -i 整数 -x 环境变量 -r只读</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;变量命名规则&quot;&gt;&lt;a href=&quot;#变量命名规则&quot; class=&quot;headerlink&quot; title=&quot;变量命名规则&quot;&gt;&lt;/a&gt;变量命名规则&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;变量与内容使用 &lt;code&gt;=&lt;/code&gt;号连接，&lt;code&gt;=&lt;/code&gt;两边不加空格&lt;/li&gt;
+&lt;li&gt;变量名仅以英文和数字命名，且英文开头&lt;/li&gt;
+&lt;li&gt;转义字符&lt;code&gt;\&lt;/code&gt;,将特殊字符转换为一般字符&lt;/li&gt;
+&lt;li&gt;${命令}为其它命令提供信息&lt;/li&gt;
+&lt;li&gt;${变量}累加内容
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Shell" scheme="http://yoursite.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux firewalld设置</title>
+    <link href="http://yoursite.com/Linux_firewall.html"/>
+    <id>http://yoursite.com/Linux_firewall.html</id>
+    <published>2018-01-10T08:10:56.840Z</published>
+    <updated>2018-01-10T08:10:56.844Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="firewalld-基本使用"><a href="#firewalld-基本使用" class="headerlink" title="firewalld 基本使用"></a>firewalld 基本使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动 </span></span><br><span class="line">systemctl start firewalld</span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#查看状态 </span></span><br><span class="line">systemctl status firewalld </span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="comment">#禁用 </span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="comment">#开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> firewalld</span><br><span class="line"><span class="comment">#开机禁用</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#是否开机启动</span></span><br><span class="line">systemctl is-enabled firewalld</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="配置firewalld-cmd"><a href="#配置firewalld-cmd" class="headerlink" title="配置firewalld-cmd"></a>配置firewalld-cmd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看版本</span></span><br><span class="line">firewall-cmd --version</span><br><span class="line"><span class="comment">#查看帮助</span></span><br><span class="line">firewall-cmd --<span class="built_in">help</span></span><br><span class="line"><span class="comment">#显示状态</span></span><br><span class="line">firewall-cmd --state</span><br><span class="line"><span class="comment">#查看所有打开的端口</span></span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line"><span class="comment">#更新防火墙规则</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看区域信息</span></span><br><span class="line">firewall-cmd --get-active-zones</span><br><span class="line"><span class="comment">#查看指定接口所属区域</span></span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0</span><br><span class="line"><span class="comment">#拒绝所有</span></span><br><span class="line">firewall-cmd --panic-on</span><br><span class="line"><span class="comment">#取消拒绝状态</span></span><br><span class="line">firewall-cmd --panic-off</span><br><span class="line"><span class="comment">#查看是否拒绝</span></span><br><span class="line">firewall-cmd --query-panic</span><br></pre></td></tr></table></figure><h3 id="开启端口"><a href="#开启端口" class="headerlink" title="开启端口"></a>开启端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加  （--permanent永久生效，没有此参数重启后失效）</span></span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent    </span><br><span class="line"><span class="comment">#重新载入</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看</span></span><br><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;firewalld-基本使用&quot;&gt;&lt;a href=&quot;#firewalld-基本使用&quot; class=&quot;headerlink&quot; title=&quot;firewalld 基本使用&quot;&gt;&lt;/a&gt;firewalld 基本使用&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl start firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#停止&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#查看状态 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl status firewalld &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重启&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl restart firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#禁用 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl stop firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机禁用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#是否开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl is-enabled firewalld&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="防火墙" scheme="http://yoursite.com/tags/firewall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 终端提示符</title>
+    <link href="http://yoursite.com/Linux_PS1.html"/>
+    <id>http://yoursite.com/Linux_PS1.html</id>
+    <published>2018-01-10T08:01:12.153Z</published>
+    <updated>2018-01-10T08:01:12.156Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="设置终端提示符步骤"><a href="#设置终端提示符步骤" class="headerlink" title="设置终端提示符步骤"></a>设置终端提示符步骤</h4><ol><li><p>修改环境变量</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure></li><li><p>添加修改内容</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PS1='\[\033[0;31m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;&amp; echo "[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200")[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]'</span><br></pre></td></tr></table></figure></li></ol><a id="more"></a><ol><li><p>加载环境变量</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></li><li><p>图片显示<br><img src="https://i.loli.net/2017/11/09/5a03d8f27c9a1.png" alt="26T1D50.png"></p></li><li><p>查看终端提示符设置<br>该命令常被用于剽窃他人的终端提示符</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PS1</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;设置终端提示符步骤&quot;&gt;&lt;a href=&quot;#设置终端提示符步骤&quot; class=&quot;headerlink&quot; title=&quot;设置终端提示符步骤&quot;&gt;&lt;/a&gt;设置终端提示符步骤&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;修改环境变量&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加修改内容&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;export PS1=&#39;\[\033[0;31m\]\342\224\214\342\224\200$([[ $? != 0 ]] &amp;amp;&amp;amp; echo &quot;[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200&quot;)[\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\$\[\e[0m\]&#39;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 定时任务</title>
+    <link href="http://yoursite.com/Linux_crontab.html"/>
+    <id>http://yoursite.com/Linux_crontab.html</id>
+    <published>2018-01-10T07:56:15.120Z</published>
+    <updated>2018-01-10T07:56:15.124Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h3><blockquote><p>Linux定时任务每分钟检查一次来处理</p></blockquote><h4 id="crontab-语法"><a href="#crontab-语法" class="headerlink" title="crontab 语法"></a>crontab 语法</h4><p><code>crontab [-u username] [-ler]</code>  </p><h4 id="crontab参数"><a href="#crontab参数" class="headerlink" title="crontab参数"></a>crontab参数</h4><ul><li>l：编辑crontab的工作内容</li><li>e：查看crontab的工作内容</li><li>r：移除所有crontab的工作内容</li><li>u：设定某个用户的cron服务<a id="more"></a><h4 id="crontab工作内容"><a href="#crontab工作内容" class="headerlink" title="crontab工作内容"></a>crontab工作内容</h4>crontab内容分为六个部分  </li><li>minute： 表示分钟，可以是从0到59之间的任何整数</li><li>hour：表示小时，可以是从0到23之间的任何整数</li><li>day：表示日期，可以是从1到31之间的任何整数</li><li>month：表示月份，可以是从1到12之间的任何整数</li><li>week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日</li><li>command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件</li></ul><h4 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h4><ul><li>*：任何时刻都接受</li><li>\,：代表分隔时段</li><li>-：代表时间范围 </li><li>/n：n代表数字，表达每隔n个单位</li></ul><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><blockquote><p>30 7 8 <em> </em> ls  指定每月8号的7：30分执行ls命令<br>30 3 10,20 <em> </em> ls 指定每月的10号及20号的3：30执行ls命令<br><em>/15  </em>         <em>        </em>         <em>     ls  每15分钟执行一次ls命令  </em>/1 <em> </em> <em> </em> sleep 3 &amp;&amp;  ls 睡眠3秒再执行ls命令</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;crontab&quot;&gt;&lt;a href=&quot;#crontab&quot; class=&quot;headerlink&quot; title=&quot;crontab&quot;&gt;&lt;/a&gt;crontab&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Linux定时任务每分钟检查一次来处理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;crontab-语法&quot;&gt;&lt;a href=&quot;#crontab-语法&quot; class=&quot;headerlink&quot; title=&quot;crontab 语法&quot;&gt;&lt;/a&gt;crontab 语法&lt;/h4&gt;&lt;p&gt;&lt;code&gt;crontab [-u username] [-ler]&lt;/code&gt;  &lt;/p&gt;
+&lt;h4 id=&quot;crontab参数&quot;&gt;&lt;a href=&quot;#crontab参数&quot; class=&quot;headerlink&quot; title=&quot;crontab参数&quot;&gt;&lt;/a&gt;crontab参数&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;l：编辑crontab的工作内容&lt;/li&gt;
+&lt;li&gt;e：查看crontab的工作内容&lt;/li&gt;
+&lt;li&gt;r：移除所有crontab的工作内容&lt;/li&gt;
+&lt;li&gt;u：设定某个用户的cron服务
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 文件与目录</title>
+    <link href="http://yoursite.com/Linux_file.html"/>
+    <id>http://yoursite.com/Linux_file.html</id>
+    <published>2018-01-10T07:08:39.826Z</published>
+    <updated>2018-01-10T07:08:39.829Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="目录简单使用"><a href="#目录简单使用" class="headerlink" title="目录简单使用"></a>目录简单使用</h3><h4 id="linux路径"><a href="#linux路径" class="headerlink" title="linux路径"></a>linux路径</h4><ul><li>相对路径(basename)：从某一非根目录开始的路径</li><li>绝对路径(dirname)：从根目录开始的路径</li></ul><h4 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h4><ul><li>cd：切换目录</li><li>pwd： 显示当前目录</li><li>mkdir： 新建目录</li><li>rmdir： 删除目录</li><li>ls：查看当前目录下的文件<a id="more"></a><h3 id="文件简单使用"><a href="#文件简单使用" class="headerlink" title="文件简单使用"></a>文件简单使用</h3><h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4></li><li>d：目录</li><li>l：连接文件 linkfile</li><li>b：设备文件里面的可供存储的接口设备</li><li>c：设备文件里的串行端口<h4 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h4></li><li>cat：查看文件全部内容</li><li>more：分屏向后查看文件内容</li><li>less：分屏前后翻查看文件内容</li><li>head：从头查看数行文件内容</li><li>tail：从后查看数行文件内容<h4 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h4></li><li>cut：选取命令,设置分隔符进行剪切</li><li>join：拼接</li><li>sed：管道命令 按行处理</li><li>awk：分析</li><li>sort：排序 </li><li>uniq：显示重复</li><li>grep：查找</li><li>diff：比较文件之间不同</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;目录简单使用&quot;&gt;&lt;a href=&quot;#目录简单使用&quot; class=&quot;headerlink&quot; title=&quot;目录简单使用&quot;&gt;&lt;/a&gt;目录简单使用&lt;/h3&gt;&lt;h4 id=&quot;linux路径&quot;&gt;&lt;a href=&quot;#linux路径&quot; class=&quot;headerlink&quot; title=&quot;linux路径&quot;&gt;&lt;/a&gt;linux路径&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;相对路径(basename)：从某一非根目录开始的路径&lt;/li&gt;
+&lt;li&gt;绝对路径(dirname)：从根目录开始的路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;处理目录&quot;&gt;&lt;a href=&quot;#处理目录&quot; class=&quot;headerlink&quot; title=&quot;处理目录&quot;&gt;&lt;/a&gt;处理目录&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;cd：切换目录&lt;/li&gt;
+&lt;li&gt;pwd： 显示当前目录&lt;/li&gt;
+&lt;li&gt;mkdir： 新建目录&lt;/li&gt;
+&lt;li&gt;rmdir： 删除目录&lt;/li&gt;
+&lt;li&gt;ls：查看当前目录下的文件
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
   
   <entry>
     <title>First Blog</title>
