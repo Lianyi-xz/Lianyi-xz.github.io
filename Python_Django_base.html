@@ -442,7 +442,7 @@
       
 
       
-        <h3 id="创建Django"><a href="#创建Django" class="headerlink" title="创建Django"></a>创建Django</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看django版本</span><br><span class="line">python -m django --version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>创建新项目</span><br><span class="line"> django-admin startproject project_name </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>开发环境运行</span><br><span class="line">  python manage.py runserver [ip:port]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>创建应用</span><br><span class="line">  python manage.py startapp app_name </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>创建管理网站用户</span><br><span class="line">  python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+        <h3 id="创建Django"><a href="#创建Django" class="headerlink" title="创建Django"></a>创建Django</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看django版本</span></span><br><span class="line">python -m django --version</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">创建新项目</span></span><br><span class="line"> django-admin startproject project_name </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">开发环境运行</span></span><br><span class="line">  python manage.py runserver [ip:port]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">创建应用</span></span><br><span class="line">  python manage.py startapp app_name </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">创建管理网站用户</span></span><br><span class="line">  python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="Django-项目默认文件"><a href="#Django-项目默认文件" class="headerlink" title="Django 项目默认文件"></a>Django 项目默认文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">project_name/              <span class="comment">#项目的容器，可重命名</span></span><br><span class="line">    manage.py              <span class="comment">#命令行程序，可与项目交互</span></span><br><span class="line">    project_name/          <span class="comment">#项目包，需要用来导入任何内容的python包名(eg:project_name.urls)</span></span><br><span class="line">        __init__.py        <span class="comment">#空的文件，该目录应该被认为是一个Python包</span></span><br><span class="line">        settings.py        <span class="comment">#项目的设置/配置</span></span><br><span class="line">        urls.py            <span class="comment">#URL声明</span></span><br><span class="line">        wsgi.py            <span class="comment">#WSGI兼容的Web服务器为您的项目提供服务的入口点</span></span><br></pre></td></tr></table></figure>
 <h3 id="Django-应用默认文件"><a href="#Django-应用默认文件" class="headerlink" title="Django 应用默认文件"></a>Django 应用默认文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app_name/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py               </span><br><span class="line">    migrations/           <span class="comment">#模型迁移文件，用于创建或撤销数据表</span></span><br><span class="line">        __init__.py</span><br><span class="line">    models.py             <span class="comment">#模型，存放程序数据表 M</span></span><br><span class="line">    tests.py</span><br><span class="line">    views.py              <span class="comment">#控制器，管理页面内容 C</span></span><br></pre></td></tr></table></figure>
@@ -565,7 +565,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -576,7 +576,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -587,7 +587,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

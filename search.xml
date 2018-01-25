@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[爬虫：xpath 提取数据]]></title>
+    <url>%2FPython_Crawlwe_xpath.html</url>
+    <content type="text"><![CDATA[lxml 安装1pip install lxml xpath引用1from lxml import etree XPath表达式12345678910111213#XPath基本语法 / #从根节点选取 // #选择任意位置的某个节点 | #选取若干个路径 . #选取当前节点 .. #选取当前节点的父节点 @ #选取属性/text() #提取文本内容/@xxxx #提取属性内容//td #选择所有的td元素//div[@calss="mine"] #选择所有具有class=mine属性的div元素&lt;html&gt;.xpath("/html/head/title") #选择html中head标签的title元素 Chrome 获取xpath 打开Chrome浏览器 进入开发者工具 右键相应标签-Copy-Copy XPath 参考文档我的脚本]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[爬虫：Beautiful Soup库-提取数据]]></title>
+    <url>%2FPython_Crawler_bs4.html</url>
+    <content type="text"><![CDATA[beautifulsoup安装1pip install beautifulsoup4 beautifulsoup引用12from bs4 import BeautifulSoupimport bs4 Beatiful Soup类基本元素12345Tag #标签 &lt;tag&gt; 整个html文件Name #标签的名字 &lt;tag&gt;.nameAttributes #标签属性 &lt;tag&gt;.attrs 数组形式NavigableString #标签内容 &lt;tag&gt;.stringComment #标签内容注释部分 &lt;tag&gt;.string Html内容遍历方法123456789101112#上行遍历 .parent #父节点标签 .parents #节点先辈标签的迭代类型#下行遍历 .contents #子节点列表 .children #子节点的迭代类型 .deseendants #子孙节点的迭代类型#平行遍历(同一个父节点) .next_sibling #下一个平行节点 .previous_sibling #上一个平行节点 .next_siblings #所有后续平行节点 .previous_siblings #所有前续平行节点 find_all方法123456789101112&lt;tag&gt;(..) eq &lt;tag&gt;.find_all(..)soup(..) eq soup.find_all(..).find_all(name,attrs,recursive,string,**kwargs) name： #对标签名称的检索字符串 attrs: #对标签属性值的检索字符串，可标注属性检索 recursive: #是否针对所有子孙节点搜索，默认True string: #对标签内容进行检索 soup.find_all(id="link2")soup.find_all("a", class_="sister")soup.find_all("a", attrs=&#123;"class": "sister"&#125;) 参考文档我的脚本Beautiful Soup 4.2.0]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[爬虫：request库获取页面]]></title>
+    <url>%2FPython_Crawler_request.html</url>
+    <content type="text"><![CDATA[requests安装1pip install requests Requests Requests：对html操作 1234567891011121314151617181920#Requests七个主要方法 request() #构造一个请求 get() #获取html网页 head() #获取html头信息 post() #向html提交post请求 增 put() #提交put请求 改(改所有字段) patch() #提交局部修改请求 改 delete() #提交删除请求 #Requests库异常 ConnectionError HTTPError URLRequired #url缺失 TooManyRedirects #最大重定向次数 ConnectTimeout #链接超时 Timeout #请求超时 #获取一个网页 r = requests.get(url) requests.get(url,params=None,**kwargs) Response Response：html返回内容 123456789#Response对象的属性 r.status_code #http请求返回状态 r.text #http响应内容的字符串形式 r.encoding #http的头部猜测(charset)的响应内容编码方式 r.apparent_encoding #http内容中分析的响应内容编码方式 r.content #http响应的二进制形式 #Response异常 r.raise_for_status() #判断r.status_code是否为200，否 返回异常 **kwargs控制访问参数12345678910111213params #字典或字节序列，作为参数添加到url中data #字典、字节序列或文件对象,作为Request的内容json #json格式的数据，作为Request内容headers #字典，http定制头 hd = &#123;'user-agent':'Chrome/10 '&#125; Mozilla/5.0cookies #字典或CookieJar,Request中的cookieauth #元祖，支持HTTP认证功能files #字典，传输文件 fs = &#123;'file':open('data.xls','rb')&#125;timeout #设置超时时间，单位为秒proxies #字典，设定访问代理服务器，可增加登录认证allow_redirects #True/False 是否允许重定向stream #是否立即下载内容 默认Tureverify #ssl证书开关，默认Truecert #本地ssl证书路径 参考文档我的脚本中文requests英文requests]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Django 模板(V)]]></title>
     <url>%2FPython_Django_templates.html</url>
-    <content type="text"><![CDATA[创建模板文件夹1mkdir projecct_name/app_name/templates/app_name 模板基本操作12345678#编辑应用首页模板edit projecct_name/app_name/templates/app_name/index.html#嵌入代码&#123;% code %&#125;#嵌入变量&#123;&#123; var &#125;&#125;#嵌入 url, url_name 为设置url.path时填写的name内容&#123;% url 'app_name.url_name' var%&#125; if语句12345&#123;% if a %&#125; &#123;&#123; a &#125;&#125;&#123;% else %&#125; &lt;p&gt; empty&lt;/p&gt;&#123;% endif %&#125;]]></content>
+    <content type="text"><![CDATA[创建模板文件夹1mkdir projecct_name/app_name/templates/app_name 模板基本操作12345678#编辑应用首页模板edit projecct_name/app_name/templates/app_name/index.html#嵌入代码&#123;% code %&#125;#嵌入变量&#123;&#123; var &#125;&#125;#嵌入 url, url_name 为设置url.path时填写的name内容&#123;% url 'app_name:url_name' var%&#125; if语句12345&#123;% if a %&#125; &#123;&#123; a &#125;&#125;&#123;% else %&#125; &lt;p&gt; empty&lt;/p&gt;&#123;% endif %&#125; 静态文件123456edit projecct_name/app_name/templates/app_name/index.html&#123;#加载静态文件#&#125;&#123;% load static %&#125;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&#123;% static &apos;polls/css/style.css&apos; %&#125;&quot; /&gt;&lt;img src=&quot;&#123;% static &apos;polls/images/one.jpg&apos; %&#125;&quot; alt=&quot;静态图片&quot; &gt;]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Django 静态文件]]></title>
+    <url>%2FPython_Django_static.html</url>
+    <content type="text"><![CDATA[创建静态文件1234#创建 css、js、图片文件夹 mkdir projecct_name/app_name/static/app_name/css/ mkdir projecct_name/app_name/static/app_name/js/ mkdir projecct_name/app_name/static/app_name/images/ 编辑静态文件1234567edit projecct_name/app_name/static/app_name/css/style.cssli a &#123; color : green ; &#125;body &#123; background : white url （"../images/background.gif"） no-repeat right bottom ; &#125; 使用静态文件123456edit projecct_name/app_name/templates/app_name/index.html&#123;#加载静态文件#&#125;&#123;% load static %&#125;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&#123;% static &apos;polls/css/style.css&apos; %&#125;&quot; /&gt;&lt;img src=&quot;&#123;% static &apos;polls/images/one.jpg&apos; %&#125;&quot; alt=&quot;静态图片&quot; &gt;]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Django 通用视图]]></title>
+    <url>%2FPython_Django_generic.html</url>
+    <content type="text"><![CDATA[并不能git到有什么作用 通用视图简介 快捷地将数据库数据呈现在网页上 在控制器(view.py)中编写 通用表单分为： TemplateView：只返回模板 ListView：返回某model中的所有数据 DetailView：返回每个数据的详细信息 使用步骤 修改url配置 创建通用视图类 基于Django的通用视图引入新的视图 修改url配置1234567891011edit create project_name/app_name/urls.pyfrom django.urls import pathfrom . import viewsapp_name = &apos;app_name&apos;urlpatterns = [ path(&apos;&apos;, views.IndexView.as_view(), name=&apos;index&apos;), #使用IndexView 通用视图类 path(&apos;&lt;int:pk&gt;/&apos;, views.DetailView.as_view(), name=&apos;detail&apos;), path(&apos;&lt;int:pk&gt;/results/&apos;, views.ResultsView.as_view(), name=&apos;results&apos;), path(&apos;&lt;int:question_id&gt;/vote/&apos;, views.vote, name=&apos;vote&apos;),] 修改控制器1234567891011121314151617181920212223edit create project_name/app_name/view.pyfrom django.shortcuts import get_object_or_404, renderfrom django.http import HttpResponseRedirectfrom django.urls import reversefrom django.views import genericfrom .models import Choice, Questionclass IndexView(generic.ListView): template_name = &apos;app_name/index.html&apos; context_object_name = &apos;latest_question_list&apos; def get_queryset(self): &quot;&quot;&quot;Return the last five published questions.&quot;&quot;&quot; return Question.objects.order_by(&apos;-pub_date&apos;)[:5]class DetailView(generic.DetailView): model = Question template_name = &apos;app_name/detail.html&apos;class ResultsView(generic.DetailView): model = Question template_name = &apos;app_name/results.html&apos;]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Django 表单]]></title>
+    <url>%2FPython_Django_form.html</url>
+    <content type="text"><![CDATA[简单的表单案例 视图部分123456789101112131415edit projecct_name/app_name/templates/app_name/detail.html&#123;#method=&quot;post&quot; 修改数据#&#125;&lt;form action=&quot;&#123;% url &apos;polls:vote&apos; question.id %&#125;&quot; method=&quot;post&quot;&gt; &#123;#防止跨站点请求伪造#&#125; &#123;% csrf_token %&#125; &#123;% for choice in question.choice_set.all %&#125; &#123;#forloop.counter表示for标签已经经过了多少次循环 #&#125; &lt;input type=&quot;radio&quot; name=&quot;choice&quot; id=&quot;choice&#123;&#123; forloop.counter &#125;&#125;&quot; value=&quot;&#123;&#123; choice.id &#125;&#125;&quot; /&gt; &lt;label for=&quot;choice&#123;&#123; forloop.counter &#125;&#125;&quot;&gt;&#123;&#123; choice.choice_text &#125;&#125;&lt;/label&gt; &lt;br /&gt; &#123;% endfor %&#125; &#123;# 将选中单选项的 value值以post的方式传递给 &apos;polls:vote&apos;#&#125; &lt;input type=&quot;submit&quot; value=&quot;Vote&quot; /&gt;&lt;/form&gt; 控制器部分1234567891011121314151617181920212223#导入 Question,Choice 模型from .models import Question,Choicefrom django.http import HttpResponseRedirect,HttpResponsefrom django.urls import reverse#使用模板简写 import 内容from django.shortcuts import render,get_object_or_404def vote(request,question_id): question = get_object_or_404(Question,pk=question_id) try: #request.POST ：通过密钥访问提交的数据 # request.POST[&apos;choice&apos;]以字符串形式返回所选选项的ID #在与question外键关联的choice中获取某条的choice selected_choice = question.choice_set.get(pk=request.POST[&apos;choice&apos;]) except (KeyError,Choice.DoesNotExist): context = &#123;&apos;question&apos;:question,&apos;error_message&apos;:&quot;you didn&apos;t select a choice.&quot;&#125; return render(request,&apos;polls/detail.html&apos;,context) else: #该条choice 的votes字段+1 并保存 selected_choice.votes += 1 selected_choice.save() #y用户被重定向的rul return HttpResponseRedirect(reverse(&apos;polls:results&apos;,args=(question.id,))) 模型部分]]></content>
       <categories>
         <category>Python</category>
       </categories>

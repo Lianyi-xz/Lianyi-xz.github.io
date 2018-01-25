@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="OS," />
+  <meta name="keywords" content="爬虫," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="目录简单使用linux路径 相对路径(basename)：从某一非根目录开始的路径 绝对路径(dirname)：从根目录开始的路径  处理目录 cd：切换目录 pwd： 显示当前目录 mkdir： 新建目录 rmdir： 删除目录 ls：查看当前目录下的文件">
-<meta name="keywords" content="OS">
+<meta name="description" content="requests安装1pip install requests Requests Requests：对html操作  1234567891011121314151617181920#Requests七个主要方法  request()         #构造一个请求  get()             #获取html网页  head()            #获取html头信息  post()">
+<meta name="keywords" content="爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 文件与目录">
-<meta property="og:url" content="http://yoursite.com/Linux_file.html">
+<meta property="og:title" content="爬虫：request库获取页面">
+<meta property="og:url" content="http://yoursite.com/Python_Crawler_request.html">
 <meta property="og:site_name" content="Lianyi Blog">
-<meta property="og:description" content="目录简单使用linux路径 相对路径(basename)：从某一非根目录开始的路径 绝对路径(dirname)：从根目录开始的路径  处理目录 cd：切换目录 pwd： 显示当前目录 mkdir： 新建目录 rmdir： 删除目录 ls：查看当前目录下的文件">
+<meta property="og:description" content="requests安装1pip install requests Requests Requests：对html操作  1234567891011121314151617181920#Requests七个主要方法  request()         #构造一个请求  get()             #获取html网页  head()            #获取html头信息  post()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-10T07:08:39.829Z">
+<meta property="og:updated_time" content="2018-01-25T06:04:15.691Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 文件与目录">
-<meta name="twitter:description" content="目录简单使用linux路径 相对路径(basename)：从某一非根目录开始的路径 绝对路径(dirname)：从根目录开始的路径  处理目录 cd：切换目录 pwd： 显示当前目录 mkdir： 新建目录 rmdir： 删除目录 ls：查看当前目录下的文件">
+<meta name="twitter:title" content="爬虫：request库获取页面">
+<meta name="twitter:description" content="requests安装1pip install requests Requests Requests：对html操作  1234567891011121314151617181920#Requests七个主要方法  request()         #构造一个请求  get()             #获取html网页  head()            #获取html头信息  post()">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Linux_file.html"/>
+  <link rel="canonical" href="http://yoursite.com/Python_Crawler_request.html"/>
 
 
 
 
 
-  <title>Linux 文件与目录 | Lianyi Blog</title>
+  <title>爬虫：request库获取页面 | Lianyi Blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux_file.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Python_Crawler_request.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lian yi">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux 文件与目录</h1>
+          <h1 class="post-title" itemprop="name headline">爬虫：request库获取页面</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T15:08:39+08:00">
-                2018-01-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T14:04:15+08:00">
+                2018-01-25
               </time>
             
 
@@ -371,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -388,7 +388,7 @@
 
           
           
-             <span id="/Linux_file.html" class="leancloud_visitors" data-flag-title="Linux 文件与目录">
+             <span id="/Python_Crawler_request.html" class="leancloud_visitors" data-flag-title="爬虫：request库获取页面">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -442,35 +442,18 @@
       
 
       
-        <h3 id="目录简单使用"><a href="#目录简单使用" class="headerlink" title="目录简单使用"></a>目录简单使用</h3><h4 id="linux路径"><a href="#linux路径" class="headerlink" title="linux路径"></a>linux路径</h4><ul>
-<li>相对路径(basename)：从某一非根目录开始的路径</li>
-<li>绝对路径(dirname)：从根目录开始的路径</li>
-</ul>
-<h4 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h4><ul>
-<li>cd：切换目录</li>
-<li>pwd： 显示当前目录</li>
-<li>mkdir： 新建目录</li>
-<li>rmdir： 删除目录</li>
-<li>ls：查看当前目录下的文件<a id="more"></a>
-<h3 id="文件简单使用"><a href="#文件简单使用" class="headerlink" title="文件简单使用"></a>文件简单使用</h3><h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4></li>
-<li>d：目录</li>
-<li>l：连接文件 linkfile</li>
-<li>b：设备文件里面的可供存储的接口设备</li>
-<li>c：设备文件里的串行端口<h4 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h4></li>
-<li>cat：查看文件全部内容</li>
-<li>more：分屏向后查看文件内容</li>
-<li>less：分屏前后翻查看文件内容</li>
-<li>head：从头查看数行文件内容</li>
-<li>tail：从后查看数行文件内容<h4 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h4></li>
-<li>cut：选取命令,设置分隔符进行剪切</li>
-<li>join：拼接</li>
-<li>sed：管道命令 按行处理</li>
-<li>awk：分析</li>
-<li>sort：排序 </li>
-<li>uniq：显示重复</li>
-<li>grep：查找</li>
-<li>diff：比较文件之间不同</li>
-</ul>
+        <h3 id="requests安装"><a href="#requests安装" class="headerlink" title="requests安装"></a>requests安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<h3 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h3><blockquote>
+<p>Requests：对html操作</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Requests七个主要方法</span></span><br><span class="line">  request()         <span class="comment">#构造一个请求</span></span><br><span class="line">  get()             <span class="comment">#获取html网页</span></span><br><span class="line">  head()            <span class="comment">#获取html头信息</span></span><br><span class="line">  post()            <span class="comment">#向html提交post请求  增</span></span><br><span class="line">  put()             <span class="comment">#提交put请求         改(改所有字段)</span></span><br><span class="line">  patch()           <span class="comment">#提交局部修改请求     改</span></span><br><span class="line">  delete()          <span class="comment">#提交删除请求</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#Requests库异常</span></span><br><span class="line">  ConnectionError           </span><br><span class="line">  HTTPError</span><br><span class="line">  URLRequired               <span class="comment">#url缺失</span></span><br><span class="line">  TooManyRedirects          <span class="comment">#最大重定向次数</span></span><br><span class="line">  ConnectTimeout            <span class="comment">#链接超时</span></span><br><span class="line">  Timeout                   <span class="comment">#请求超时</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">#获取一个网页</span></span><br><span class="line">  r = requests.get(url)</span><br><span class="line">  requests.get(url,params=None,**kwargs)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h3><blockquote>
+<p>Response：html返回内容</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Response对象的属性</span></span><br><span class="line">  r.status_code              <span class="comment">#http请求返回状态</span></span><br><span class="line">  r.text                     <span class="comment">#http响应内容的字符串形式</span></span><br><span class="line">  r.encoding                 <span class="comment">#http的头部猜测(charset)的响应内容编码方式</span></span><br><span class="line">  r.apparent_encoding        <span class="comment">#http内容中分析的响应内容编码方式</span></span><br><span class="line">  r.content                  <span class="comment">#http响应的二进制形式</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">#Response异常</span></span><br><span class="line">  r.raise_for_status()    <span class="comment">#判断r.status_code是否为200，否 返回异常</span></span><br></pre></td></tr></table></figure>
+<h3 id="kwargs控制访问参数"><a href="#kwargs控制访问参数" class="headerlink" title="**kwargs控制访问参数"></a>**kwargs控制访问参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">params           <span class="comment">#字典或字节序列，作为参数添加到url中</span></span><br><span class="line">data             <span class="comment">#字典、字节序列或文件对象,作为Request的内容</span></span><br><span class="line">json             <span class="comment">#json格式的数据，作为Request内容</span></span><br><span class="line">headers          <span class="comment">#字典，http定制头     hd = &#123;'user-agent':'Chrome/10  '&#125; Mozilla/5.0</span></span><br><span class="line">cookies          <span class="comment">#字典或CookieJar,Request中的cookie</span></span><br><span class="line">auth             <span class="comment">#元祖，支持HTTP认证功能</span></span><br><span class="line">files            <span class="comment">#字典，传输文件         fs = &#123;'file':open('data.xls','rb')&#125;</span></span><br><span class="line">timeout          <span class="comment">#设置超时时间，单位为秒</span></span><br><span class="line">proxies          <span class="comment">#字典，设定访问代理服务器，可增加登录认证</span></span><br><span class="line">allow_redirects  <span class="comment">#True/False 是否允许重定向</span></span><br><span class="line">stream           <span class="comment">#是否立即下载内容 默认Ture</span></span><br><span class="line">verify           <span class="comment">#ssl证书开关，默认True</span></span><br><span class="line">cert             <span class="comment">#本地ssl证书路径</span></span><br></pre></td></tr></table></figure>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://github.com/Lianyi-xz/Crawler-learn/tree/master/request" target="_blank" rel="noopener">我的脚本</a><br><a href="http://cn.python-requests.org/zh_CN/latest/" target="_blank" rel="noopener">中文requests</a><br><a href="http://docs.python-requests.org/en/master/user/quickstart/#json-response-content" target="_blank" rel="noopener">英文requests</a></p>
 
       
     </div>
@@ -488,7 +471,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OS/" rel="tag"># OS</a>
+            <a href="/tags/Crawler/" rel="tag"># 爬虫</a>
           
         </div>
       
@@ -501,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/First_Hexo_Blog.html" rel="next" title="First Blog">
-                <i class="fa fa-chevron-left"></i> First Blog
+              <a href="/Python_Django_templates.html" rel="next" title="Django 模板(V)">
+                <i class="fa fa-chevron-left"></i> Django 模板(V)
               </a>
             
           </div>
@@ -511,8 +494,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Linux_crontab.html" rel="prev" title="Linux 定时任务">
-                Linux 定时任务 <i class="fa fa-chevron-right"></i>
+              <a href="/Python_Crawler_bs4.html" rel="prev" title="爬虫：Beautiful Soup库-提取数据">
+                爬虫：Beautiful Soup库-提取数据 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -700,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目录简单使用"><span class="nav-number">1.</span> <span class="nav-text">目录简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#linux路径"><span class="nav-number">1.1.</span> <span class="nav-text">linux路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理目录"><span class="nav-number">1.2.</span> <span class="nav-text">处理目录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件简单使用"><span class="nav-number">2.</span> <span class="nav-text">文件简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件类型"><span class="nav-number">2.1.</span> <span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件查看"><span class="nav-number">2.2.</span> <span class="nav-text">文件查看</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本处理"><span class="nav-number">2.3.</span> <span class="nav-text">文本处理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requests安装"><span class="nav-number">1.</span> <span class="nav-text">requests安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requests"><span class="nav-number">2.</span> <span class="nav-text">Requests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Response"><span class="nav-number">3.</span> <span class="nav-text">Response</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kwargs控制访问参数"><span class="nav-number">4.</span> <span class="nav-text">**kwargs控制访问参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>
