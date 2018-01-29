@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-25T08:01:10.953Z</updated>
+  <updated>2018-01-29T05:47:14.393Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,127 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux sudo详解</title>
+    <link href="http://yoursite.com/Linux_sudo.html"/>
+    <id>http://yoursite.com/Linux_sudo.html</id>
+    <published>2018-01-29T05:47:14.389Z</published>
+    <updated>2018-01-29T05:47:14.393Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使得用户以其他用户的身份通过主机执行命令</p></blockquote><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#默认保存权限5分钟</span></span><br><span class="line"><span class="comment">#配置文件</span></span><br><span class="line">/etc/sudoers</span><br><span class="line"></span><br><span class="line"><span class="comment">#语法</span></span><br><span class="line"><span class="comment">#谁   在那个主机=(以谁的身份)  执行什么命令</span></span><br><span class="line">who   which_hosts=(runas)      commands  </span><br><span class="line">eg：</span><br><span class="line"> xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermod</span><br><span class="line">sudo</span><br><span class="line">  -k   <span class="comment">#不保存权限</span></span><br><span class="line">  -l   <span class="comment">#列出当前用户可以使用的所有的sudo类命令</span></span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#别名必须全部而且只能使用大写英文字母</span></span><br><span class="line"><span class="comment">#可使用！ 取反</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#用户别名</span></span><br><span class="line">who:User_Alias</span><br><span class="line">User_Alias USERADMIN=</span><br><span class="line">    <span class="comment">#用户的用户名</span></span><br><span class="line">    <span class="comment">#组名，使用%引导</span></span><br><span class="line">    <span class="comment">#还可以包含其它已经定义的用户别名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#主机别名</span></span><br><span class="line">which_hosts:Host_Alias</span><br><span class="line">    <span class="comment">#主机名</span></span><br><span class="line">    <span class="comment">#ip</span></span><br><span class="line">    <span class="comment">#网络地址</span></span><br><span class="line">    <span class="comment">#其他主机别名</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#运行用户别名</span></span><br><span class="line"> runas:Runas_Alias</span><br><span class="line">    <span class="comment">#用户名</span></span><br><span class="line">    <span class="comment">#%组名</span></span><br><span class="line">    <span class="comment">#其他Runas别名</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#命令别名</span></span><br><span class="line"><span class="built_in">command</span>:Cmnd_Alias</span><br><span class="line">    <span class="comment">#命令路径</span></span><br><span class="line">    <span class="comment">#目录(此目录内的所有命令)</span></span><br><span class="line">    <span class="comment">#其他事先定义过的命令别名</span></span><br></pre></td></tr></table></figure><blockquote><p>已经看不懂了…..</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;使得用户以其他用户的身份通过主机执行命令&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#默认保存权限5分钟&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/sudoers&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#语法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#谁   在那个主机=(以谁的身份)  执行什么命令&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;who   which_hosts=(runas)      commands  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;eg：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermod&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -k   &lt;span class=&quot;comment&quot;&gt;#不保存权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  -l   &lt;span class=&quot;comment&quot;&gt;#列出当前用户可以使用的所有的sudo类命令&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 禁止root远程登陆</title>
+    <link href="http://yoursite.com/Linux_root.html"/>
+    <id>http://yoursite.com/Linux_root.html</id>
+    <published>2018-01-29T05:38:56.005Z</published>
+    <updated>2018-01-29T05:38:56.006Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd xx</span><br></pre></td></tr></table></figure><h3 id="添加用户到root组"><a href="#添加用户到root组" class="headerlink" title="添加用户到root组"></a>添加用户到root组</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -g root xx</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="添加用户sudo权限"><a href="#添加用户sudo权限" class="headerlink" title="添加用户sudo权限"></a>添加用户sudo权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sudoers</span><br><span class="line"> xx all all</span><br></pre></td></tr></table></figure><h3 id="限制ssh"><a href="#限制ssh" class="headerlink" title="限制ssh"></a>限制ssh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line"><span class="comment">#PermitRootLogin yes 取消注释改为no</span></span><br></pre></td></tr></table></figure><h3 id="重启ssh"><a href="#重启ssh" class="headerlink" title="重启ssh"></a>重启ssh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#centos6</span></span><br><span class="line">service sshd reload</span><br><span class="line"><span class="comment">#centos7</span></span><br><span class="line">systemctl restart sshd.service</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;创建新用户&quot;&gt;&lt;a href=&quot;#创建新用户&quot; class=&quot;headerlink&quot; title=&quot;创建新用户&quot;&gt;&lt;/a&gt;创建新用户&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;useradd xx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;添加用户到root组&quot;&gt;&lt;a href=&quot;#添加用户到root组&quot; class=&quot;headerlink&quot; title=&quot;添加用户到root组&quot;&gt;&lt;/a&gt;添加用户到root组&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;usermod -g root xx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 免密登陆</title>
+    <link href="http://yoursite.com/Linux_ssh.html"/>
+    <id>http://yoursite.com/Linux_ssh.html</id>
+    <published>2018-01-29T05:34:17.144Z</published>
+    <updated>2018-01-29T05:34:17.145Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="配置Linux主机ssh无密码访问"><a href="#配置Linux主机ssh无密码访问" class="headerlink" title="配置Linux主机ssh无密码访问"></a>配置Linux主机ssh无密码访问</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用ssh-keygen与ssh-copy-id实现快速证书的生成及公钥下发</span></span><br><span class="line"><span class="comment">#生成一对密钥</span></span><br><span class="line">  ssh-keygen   </span><br><span class="line"><span class="comment">#下发生成的公钥</span></span><br><span class="line">  ssh-copy-id username@ip </span><br><span class="line">  or</span><br><span class="line">  ssh-copy-id -i /root/.ssh/id_rsa.pub root@ip</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;配置Linux主机ssh无密码访问&quot;&gt;&lt;a href=&quot;#配置Linux主机ssh无密码访问&quot; class=&quot;headerlink&quot; title=&quot;配置Linux主机ssh无密码访问&quot;&gt;&lt;/a&gt;配置Linux主机ssh无密码访问&lt;/h3&gt;&lt;figure class
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux firewalld设置</title>
+    <link href="http://yoursite.com/Linux_firewall.html"/>
+    <id>http://yoursite.com/Linux_firewall.html</id>
+    <published>2018-01-29T05:31:10.389Z</published>
+    <updated>2018-01-29T05:31:10.390Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="firewalld-基本使用"><a href="#firewalld-基本使用" class="headerlink" title="firewalld 基本使用"></a>firewalld 基本使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动 </span></span><br><span class="line">systemctl start firewalld</span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#查看状态 </span></span><br><span class="line">systemctl status firewalld </span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="comment">#禁用 </span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="comment">#开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> firewalld</span><br><span class="line"><span class="comment">#开机禁用</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#是否开机启动</span></span><br><span class="line">systemctl is-enabled firewalld</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="配置firewalld-cmd"><a href="#配置firewalld-cmd" class="headerlink" title="配置firewalld-cmd"></a>配置firewalld-cmd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看版本</span></span><br><span class="line">firewall-cmd --version</span><br><span class="line"><span class="comment">#查看帮助</span></span><br><span class="line">firewall-cmd --<span class="built_in">help</span></span><br><span class="line"><span class="comment">#显示状态</span></span><br><span class="line">firewall-cmd --state</span><br><span class="line"><span class="comment">#查看所有打开的端口</span></span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line"><span class="comment">#更新防火墙规则</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看区域信息</span></span><br><span class="line">firewall-cmd --get-active-zones</span><br><span class="line"><span class="comment">#查看指定接口所属区域</span></span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0</span><br><span class="line"><span class="comment">#拒绝所有</span></span><br><span class="line">firewall-cmd --panic-on</span><br><span class="line"><span class="comment">#取消拒绝状态</span></span><br><span class="line">firewall-cmd --panic-off</span><br><span class="line"><span class="comment">#查看是否拒绝</span></span><br><span class="line">firewall-cmd --query-panic</span><br></pre></td></tr></table></figure><h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加  （--permanent永久生效，没有此参数重启后失效）</span></span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent    </span><br><span class="line"><span class="comment">#重新载入</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看</span></span><br><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure><h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加</span></span><br><span class="line">firewall-cmd --add-service=ftp --zone=public  --permanent</span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">firewall-cmd --remove-service=ftp --zone=public</span><br><span class="line"><span class="comment">#查看服务是否被允许</span></span><br><span class="line">firewall-cmd --query-service=http --zone=public</span><br></pre></td></tr></table></figure><h3 id="富规则"><a href="#富规则" class="headerlink" title="富规则"></a>富规则</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看</span></span><br><span class="line">firewall-cmd --list-rich-rules</span><br><span class="line"><span class="comment">#添加</span></span><br><span class="line"> <span class="comment">#禁止特定端口访问ssh/22</span></span><br><span class="line">  firewall-cmd --permanent --zone=public --add-rich-rule=<span class="string">"rule family=ipv4 source address='x.x.x.x/24' service name='ssh' drop"</span></span><br><span class="line">  or</span><br><span class="line">  firewall-cmd --permanent --zone=public --add-rich-rule=<span class="string">"rule family='ipv4' source address='x.x.x.x/24' service name='ssh' reject"</span></span><br><span class="line">  firewall-cmd --permanent --zone=public --add-rich-rule=<span class="string">"rule family='ipv4' source address='x.x.x.x/24' port port=22 protocol=tcp reject"</span></span><br><span class="line"> <span class="comment">#允许ip访问 ssh</span></span><br><span class="line">  firewall-cmd --permanent --zone=public --add-rich-rule=<span class="string">"rule family=ipv4 source address='x.x.x.x/24' port port=22 protocol=tcp accept"</span></span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">firewall-cmd --remove-rich-rule <span class="string">'rule family=ipv4 source address=x.x.x.x/24 service name=ftp accept'</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;firewalld-基本使用&quot;&gt;&lt;a href=&quot;#firewalld-基本使用&quot; class=&quot;headerlink&quot; title=&quot;firewalld 基本使用&quot;&gt;&lt;/a&gt;firewalld 基本使用&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl start firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#停止&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#查看状态 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl status firewalld &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重启&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl restart firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#禁用 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl stop firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机禁用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#是否开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl is-enabled firewalld&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="防火墙" scheme="http://yoursite.com/tags/firewall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ELK日志平台</title>
+    <link href="http://yoursite.com/Devops_ELK_base.html"/>
+    <id>http://yoursite.com/Devops_ELK_base.html</id>
+    <published>2018-01-26T02:40:25.934Z</published>
+    <updated>2018-01-26T02:40:25.934Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ELK简介"><a href="#ELK简介" class="headerlink" title="ELK简介"></a>ELK简介</h3><p>ELK:集中式WEB日志收集平台<br>ELK=ElasticSearch+Logstash+Kiabana</p><ol><li>ElasticSearch：开源分布式搜索引擎</li><li>Logstash：开源日志收集、过滤工具</li><li>Kiabana：提供web界面<a id="more"></a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;ELK简介&quot;&gt;&lt;a href=&quot;#ELK简介&quot; class=&quot;headerlink&quot; title=&quot;ELK简介&quot;&gt;&lt;/a&gt;ELK简介&lt;/h3&gt;&lt;p&gt;ELK:集中式WEB日志收集平台&lt;br&gt;ELK=ElasticSearch+Logstash+Kiabana&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ElasticSearch：开源分布式搜索引擎&lt;/li&gt;
+&lt;li&gt;Logstash：开源日志收集、过滤工具&lt;/li&gt;
+&lt;li&gt;Kiabana：提供web界面
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yoursite.com/categories/Devops/"/>
+    
+    
+      <category term="ELK" scheme="http://yoursite.com/tags/Elk/"/>
+    
+  </entry>
   
   <entry>
     <title>爬虫：xpath 提取数据</title>
@@ -370,28 +491,6 @@
   </entry>
   
   <entry>
-    <title>Linux firewalld设置</title>
-    <link href="http://yoursite.com/Linux_firewall.html"/>
-    <id>http://yoursite.com/Linux_firewall.html</id>
-    <published>2018-01-10T08:10:56.840Z</published>
-    <updated>2018-01-10T08:10:56.844Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="firewalld-基本使用"><a href="#firewalld-基本使用" class="headerlink" title="firewalld 基本使用"></a>firewalld 基本使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动 </span></span><br><span class="line">systemctl start firewalld</span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#查看状态 </span></span><br><span class="line">systemctl status firewalld </span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="comment">#禁用 </span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="comment">#开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> firewalld</span><br><span class="line"><span class="comment">#开机禁用</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"><span class="comment">#是否开机启动</span></span><br><span class="line">systemctl is-enabled firewalld</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="配置firewalld-cmd"><a href="#配置firewalld-cmd" class="headerlink" title="配置firewalld-cmd"></a>配置firewalld-cmd</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看版本</span></span><br><span class="line">firewall-cmd --version</span><br><span class="line"><span class="comment">#查看帮助</span></span><br><span class="line">firewall-cmd --<span class="built_in">help</span></span><br><span class="line"><span class="comment">#显示状态</span></span><br><span class="line">firewall-cmd --state</span><br><span class="line"><span class="comment">#查看所有打开的端口</span></span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line"><span class="comment">#更新防火墙规则</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看区域信息</span></span><br><span class="line">firewall-cmd --get-active-zones</span><br><span class="line"><span class="comment">#查看指定接口所属区域</span></span><br><span class="line">firewall-cmd --get-zone-of-interface=eth0</span><br><span class="line"><span class="comment">#拒绝所有</span></span><br><span class="line">firewall-cmd --panic-on</span><br><span class="line"><span class="comment">#取消拒绝状态</span></span><br><span class="line">firewall-cmd --panic-off</span><br><span class="line"><span class="comment">#查看是否拒绝</span></span><br><span class="line">firewall-cmd --query-panic</span><br></pre></td></tr></table></figure><h3 id="开启端口"><a href="#开启端口" class="headerlink" title="开启端口"></a>开启端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加  （--permanent永久生效，没有此参数重启后失效）</span></span><br><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent    </span><br><span class="line"><span class="comment">#重新载入</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="comment">#查看</span></span><br><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br><span class="line"><span class="comment">#删除</span></span><br><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;firewalld-基本使用&quot;&gt;&lt;a href=&quot;#firewalld-基本使用&quot; class=&quot;headerlink&quot; title=&quot;firewalld 基本使用&quot;&gt;&lt;/a&gt;firewalld 基本使用&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl start firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#停止&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#查看状态 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl status firewalld &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重启&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl restart firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#禁用 &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl stop firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#开机禁用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; firewalld&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#是否开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;systemctl is-enabled firewalld&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="防火墙" scheme="http://yoursite.com/tags/firewall/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux 终端提示符</title>
     <link href="http://yoursite.com/Linux_PS1.html"/>
     <id>http://yoursite.com/Linux_PS1.html</id>
@@ -417,94 +516,6 @@
     
     
       <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 定时任务</title>
-    <link href="http://yoursite.com/Linux_crontab.html"/>
-    <id>http://yoursite.com/Linux_crontab.html</id>
-    <published>2018-01-10T07:56:15.120Z</published>
-    <updated>2018-01-10T07:56:15.124Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h3><blockquote><p>Linux定时任务每分钟检查一次来处理</p></blockquote><h4 id="crontab-语法"><a href="#crontab-语法" class="headerlink" title="crontab 语法"></a>crontab 语法</h4><p><code>crontab [-u username] [-ler]</code>  </p><h4 id="crontab参数"><a href="#crontab参数" class="headerlink" title="crontab参数"></a>crontab参数</h4><ul><li>l：编辑crontab的工作内容</li><li>e：查看crontab的工作内容</li><li>r：移除所有crontab的工作内容</li><li>u：设定某个用户的cron服务<a id="more"></a><h4 id="crontab工作内容"><a href="#crontab工作内容" class="headerlink" title="crontab工作内容"></a>crontab工作内容</h4>crontab内容分为六个部分  </li><li>minute： 表示分钟，可以是从0到59之间的任何整数</li><li>hour：表示小时，可以是从0到23之间的任何整数</li><li>day：表示日期，可以是从1到31之间的任何整数</li><li>month：表示月份，可以是从1到12之间的任何整数</li><li>week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日</li><li>command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件</li></ul><h4 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h4><ul><li>*：任何时刻都接受</li><li>\,：代表分隔时段</li><li>-：代表时间范围 </li><li>/n：n代表数字，表达每隔n个单位</li></ul><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><blockquote><p>30 7 8 <em> </em> ls  指定每月8号的7：30分执行ls命令<br>30 3 10,20 <em> </em> ls 指定每月的10号及20号的3：30执行ls命令<br><em>/15  </em>         <em>        </em>         <em>     ls  每15分钟执行一次ls命令  </em>/1 <em> </em> <em> </em> sleep 3 &amp;&amp;  ls 睡眠3秒再执行ls命令</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;crontab&quot;&gt;&lt;a href=&quot;#crontab&quot; class=&quot;headerlink&quot; title=&quot;crontab&quot;&gt;&lt;/a&gt;crontab&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Linux定时任务每分钟检查一次来处理&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;crontab-语法&quot;&gt;&lt;a href=&quot;#crontab-语法&quot; class=&quot;headerlink&quot; title=&quot;crontab 语法&quot;&gt;&lt;/a&gt;crontab 语法&lt;/h4&gt;&lt;p&gt;&lt;code&gt;crontab [-u username] [-ler]&lt;/code&gt;  &lt;/p&gt;
-&lt;h4 id=&quot;crontab参数&quot;&gt;&lt;a href=&quot;#crontab参数&quot; class=&quot;headerlink&quot; title=&quot;crontab参数&quot;&gt;&lt;/a&gt;crontab参数&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;l：编辑crontab的工作内容&lt;/li&gt;
-&lt;li&gt;e：查看crontab的工作内容&lt;/li&gt;
-&lt;li&gt;r：移除所有crontab的工作内容&lt;/li&gt;
-&lt;li&gt;u：设定某个用户的cron服务
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 文件与目录</title>
-    <link href="http://yoursite.com/Linux_file.html"/>
-    <id>http://yoursite.com/Linux_file.html</id>
-    <published>2018-01-10T07:08:39.826Z</published>
-    <updated>2018-01-10T07:08:39.829Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="目录简单使用"><a href="#目录简单使用" class="headerlink" title="目录简单使用"></a>目录简单使用</h3><h4 id="linux路径"><a href="#linux路径" class="headerlink" title="linux路径"></a>linux路径</h4><ul><li>相对路径(basename)：从某一非根目录开始的路径</li><li>绝对路径(dirname)：从根目录开始的路径</li></ul><h4 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h4><ul><li>cd：切换目录</li><li>pwd： 显示当前目录</li><li>mkdir： 新建目录</li><li>rmdir： 删除目录</li><li>ls：查看当前目录下的文件<a id="more"></a><h3 id="文件简单使用"><a href="#文件简单使用" class="headerlink" title="文件简单使用"></a>文件简单使用</h3><h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4></li><li>d：目录</li><li>l：连接文件 linkfile</li><li>b：设备文件里面的可供存储的接口设备</li><li>c：设备文件里的串行端口<h4 id="文件查看"><a href="#文件查看" class="headerlink" title="文件查看"></a>文件查看</h4></li><li>cat：查看文件全部内容</li><li>more：分屏向后查看文件内容</li><li>less：分屏前后翻查看文件内容</li><li>head：从头查看数行文件内容</li><li>tail：从后查看数行文件内容<h4 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h4></li><li>cut：选取命令,设置分隔符进行剪切</li><li>join：拼接</li><li>sed：管道命令 按行处理</li><li>awk：分析</li><li>sort：排序 </li><li>uniq：显示重复</li><li>grep：查找</li><li>diff：比较文件之间不同</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;目录简单使用&quot;&gt;&lt;a href=&quot;#目录简单使用&quot; class=&quot;headerlink&quot; title=&quot;目录简单使用&quot;&gt;&lt;/a&gt;目录简单使用&lt;/h3&gt;&lt;h4 id=&quot;linux路径&quot;&gt;&lt;a href=&quot;#linux路径&quot; class=&quot;headerlink&quot; title=&quot;linux路径&quot;&gt;&lt;/a&gt;linux路径&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;相对路径(basename)：从某一非根目录开始的路径&lt;/li&gt;
-&lt;li&gt;绝对路径(dirname)：从根目录开始的路径&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;处理目录&quot;&gt;&lt;a href=&quot;#处理目录&quot; class=&quot;headerlink&quot; title=&quot;处理目录&quot;&gt;&lt;/a&gt;处理目录&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;cd：切换目录&lt;/li&gt;
-&lt;li&gt;pwd： 显示当前目录&lt;/li&gt;
-&lt;li&gt;mkdir： 新建目录&lt;/li&gt;
-&lt;li&gt;rmdir： 删除目录&lt;/li&gt;
-&lt;li&gt;ls：查看当前目录下的文件
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="OS" scheme="http://yoursite.com/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>First Blog</title>
-    <link href="http://yoursite.com/First_Hexo_Blog.html"/>
-    <id>http://yoursite.com/First_Hexo_Blog.html</id>
-    <published>2018-01-09T01:59:55.244Z</published>
-    <updated>2018-01-09T01:59:55.248Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="创建个人博客"><a href="#创建个人博客" class="headerlink" title="创建个人博客"></a>创建个人博客</h2><h3 id="win-10安装Hexo"><a href="#win-10安装Hexo" class="headerlink" title="win 10安装Hexo"></a>win 10安装Hexo</h3><ul><li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a></li><li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></li><li>安装<code>Hexo</code>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>git bash</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li></ul><a id="more"></a><h3 id="Hexo设置"><a href="#Hexo设置" class="headerlink" title="Hexo设置"></a>Hexo设置</h3><ol><li>hexo初始化<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init Blog</span><br><span class="line">git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></li></ol><h4 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h4><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT主题文档</a><br><a href="http://theme-next.iissnan.com/third-party-services.html#algolia-search" target="_blank" rel="noopener">NexT第三方服务</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="noopener">分类和标签</a><br><a href="https://leaferx.online/2017/01/30/Bottomheart/" target="_blank" rel="noopener">底部动画</a><br><a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">NexT个性化</a><br><a href="http://ookamiantd.top/2017/build-blog-hexo-base/" target="_blank" rel="noopener">ookamiantd.top</a><br><a href="https://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener">hexo+github</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;创建个人博客&quot;&gt;&lt;a href=&quot;#创建个人博客&quot; class=&quot;headerlink&quot; title=&quot;创建个人博客&quot;&gt;&lt;/a&gt;创建个人博客&lt;/h2&gt;&lt;h3 id=&quot;win-10安装Hexo&quot;&gt;&lt;a href=&quot;#win-10安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;win 10安装Hexo&quot;&gt;&lt;/a&gt;win 10安装Hexo&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;安装 &lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;安装 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;安装&lt;code&gt;Hexo&lt;/code&gt;  &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;git bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-cli -g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="other" scheme="http://yoursite.com/categories/other/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   

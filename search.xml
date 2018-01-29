@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux sudo详解]]></title>
+    <url>%2FLinux_sudo.html</url>
+    <content type="text"><![CDATA[使得用户以其他用户的身份通过主机执行命令 简介123456789101112#默认保存权限5分钟#配置文件/etc/sudoers#语法#谁 在那个主机=(以谁的身份) 执行什么命令who which_hosts=(runas) commands eg： xx ALL=(root) /usr/sbin/useradd,/usr/sbin/usermodsudo -k #不保存权限 -l #列出当前用户可以使用的所有的sudo类命令 别名12345678910111213141516171819202122232425262728#别名必须全部而且只能使用大写英文字母#可使用！ 取反#用户别名who:User_AliasUser_Alias USERADMIN= #用户的用户名 #组名，使用%引导 #还可以包含其它已经定义的用户别名#主机别名which_hosts:Host_Alias #主机名 #ip #网络地址 #其他主机别名 #运行用户别名 runas:Runas_Alias #用户名 #%组名 #其他Runas别名 #命令别名command:Cmnd_Alias #命令路径 #目录(此目录内的所有命令) #其他事先定义过的命令别名 已经看不懂了…..]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 禁止root远程登陆]]></title>
+    <url>%2FLinux_root.html</url>
+    <content type="text"><![CDATA[创建新用户1useradd xx 添加用户到root组1usermod -g root xx 添加用户sudo权限12vim /etc/sudoers xx all all 限制ssh12vim /etc/ssh/sshd_config#PermitRootLogin yes 取消注释改为no 重启ssh1234#centos6service sshd reload#centos7systemctl restart sshd.service]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 免密登陆]]></title>
+    <url>%2FLinux_ssh.html</url>
+    <content type="text"><![CDATA[配置Linux主机ssh无密码访问1234567#使用ssh-keygen与ssh-copy-id实现快速证书的生成及公钥下发#生成一对密钥 ssh-keygen #下发生成的公钥 ssh-copy-id username@ip or ssh-copy-id -i /root/.ssh/id_rsa.pub root@ip]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux firewalld设置]]></title>
+    <url>%2FLinux_firewall.html</url>
+    <content type="text"><![CDATA[firewalld 基本使用12345678910111213141516#启动 systemctl start firewalld#停止systemctl disable firewalld#查看状态 systemctl status firewalld #重启systemctl restart firewalld#禁用 systemctl stop firewalld#开机启动systemctl enable firewalld#开机禁用systemctl disable firewalld#是否开机启动systemctl is-enabled firewalld 配置firewalld-cmd1234567891011121314151617181920#查看版本firewall-cmd --version#查看帮助firewall-cmd --help#显示状态firewall-cmd --state#查看所有打开的端口firewall-cmd --zone=public --list-ports#更新防火墙规则firewall-cmd --reload#查看区域信息firewall-cmd --get-active-zones#查看指定接口所属区域firewall-cmd --get-zone-of-interface=eth0#拒绝所有firewall-cmd --panic-on#取消拒绝状态firewall-cmd --panic-off#查看是否拒绝firewall-cmd --query-panic 端口12345678#添加 （--permanent永久生效，没有此参数重启后失效）firewall-cmd --zone=public --add-port=80/tcp --permanent #重新载入firewall-cmd --reload#查看firewall-cmd --zone= public --query-port=80/tcp#删除firewall-cmd --zone= public --remove-port=80/tcp --permanent 服务123456#添加firewall-cmd --add-service=ftp --zone=public --permanent#删除firewall-cmd --remove-service=ftp --zone=public#查看服务是否被允许firewall-cmd --query-service=http --zone=public 富规则123456789101112#查看firewall-cmd --list-rich-rules#添加 #禁止特定端口访问ssh/22 firewall-cmd --permanent --zone=public --add-rich-rule="rule family=ipv4 source address='x.x.x.x/24' service name='ssh' drop" or firewall-cmd --permanent --zone=public --add-rich-rule="rule family='ipv4' source address='x.x.x.x/24' service name='ssh' reject" firewall-cmd --permanent --zone=public --add-rich-rule="rule family='ipv4' source address='x.x.x.x/24' port port=22 protocol=tcp reject" #允许ip访问 ssh firewall-cmd --permanent --zone=public --add-rich-rule="rule family=ipv4 source address='x.x.x.x/24' port port=22 protocol=tcp accept"#删除firewall-cmd --remove-rich-rule 'rule family=ipv4 source address=x.x.x.x/24 service name=ftp accept']]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>防火墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ELK日志平台]]></title>
+    <url>%2FDevops_ELK_base.html</url>
+    <content type="text"><![CDATA[ELK简介ELK:集中式WEB日志收集平台ELK=ElasticSearch+Logstash+Kiabana ElasticSearch：开源分布式搜索引擎 Logstash：开源日志收集、过滤工具 Kiabana：提供web界面]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>ELK</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[爬虫：xpath 提取数据]]></title>
     <url>%2FPython_Crawlwe_xpath.html</url>
     <content type="text"><![CDATA[lxml 安装1pip install lxml xpath引用1from lxml import etree XPath表达式12345678910111213#XPath基本语法 / #从根节点选取 // #选择任意位置的某个节点 | #选取若干个路径 . #选取当前节点 .. #选取当前节点的父节点 @ #选取属性/text() #提取文本内容/@xxxx #提取属性内容//td #选择所有的td元素//div[@calss="mine"] #选择所有具有class=mine属性的div元素&lt;html&gt;.xpath("/html/head/title") #选择html中head标签的title元素 Chrome 获取xpath 打开Chrome浏览器 进入开发者工具 右键相应标签-Copy-Copy XPath 参考文档我的脚本]]></content>
@@ -153,17 +208,6 @@
       </categories>
       <tags>
         <tag>Shell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Linux firewalld设置]]></title>
-    <url>%2FLinux_firewall.html</url>
-    <content type="text"><![CDATA[firewalld 基本使用12345678910111213141516#启动 systemctl start firewalld#停止systemctl disable firewalld#查看状态 systemctl status firewalld #重启systemctl restart firewalld#禁用 systemctl stop firewalld#开机启动systemctl enable firewalld#开机禁用systemctl disable firewalld#是否开机启动systemctl is-enabled firewalld 配置firewalld-cmd1234567891011121314151617181920#查看版本firewall-cmd --version#查看帮助firewall-cmd --help#显示状态firewall-cmd --state#查看所有打开的端口firewall-cmd --zone=public --list-ports#更新防火墙规则firewall-cmd --reload#查看区域信息firewall-cmd --get-active-zones#查看指定接口所属区域firewall-cmd --get-zone-of-interface=eth0#拒绝所有firewall-cmd --panic-on#取消拒绝状态firewall-cmd --panic-off#查看是否拒绝firewall-cmd --query-panic 开启端口12345678#添加 （--permanent永久生效，没有此参数重启后失效）firewall-cmd --zone=public --add-port=80/tcp --permanent #重新载入firewall-cmd --reload#查看firewall-cmd --zone= public --query-port=80/tcp#删除firewall-cmd --zone= public --remove-port=80/tcp --permanent]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>防火墙</tag>
       </tags>
   </entry>
   <entry>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Django," />
+  <meta name="keywords" content="OS," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="创建模板文件夹1mkdir projecct_name/app_name/templates/app_name 模板基本操作12345678#编辑应用首页模板edit projecct_name/app_name/templates/app_name/index.html#嵌入代码&amp;#123;% code %&amp;#125;#嵌入变量&amp;#123;&amp;#123; var &amp;#125;&amp;#125;#嵌入 u">
-<meta name="keywords" content="Django">
+<meta name="description" content="使得用户以其他用户的身份通过主机执行命令  简介123456789101112#默认保存权限5分钟#配置文件/etc/sudoers#语法#谁   在那个主机=(以谁的身份)  执行什么命令who   which_hosts=(runas)      commands  eg： xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermodsudo  -">
+<meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django 模板(V)">
-<meta property="og:url" content="http://yoursite.com/Python_Django_templates.html">
+<meta property="og:title" content="Linux sudo详解">
+<meta property="og:url" content="http://yoursite.com/Linux_sudo.html">
 <meta property="og:site_name" content="Lianyi Blog">
-<meta property="og:description" content="创建模板文件夹1mkdir projecct_name/app_name/templates/app_name 模板基本操作12345678#编辑应用首页模板edit projecct_name/app_name/templates/app_name/index.html#嵌入代码&amp;#123;% code %&amp;#125;#嵌入变量&amp;#123;&amp;#123; var &amp;#125;&amp;#125;#嵌入 u">
+<meta property="og:description" content="使得用户以其他用户的身份通过主机执行命令  简介123456789101112#默认保存权限5分钟#配置文件/etc/sudoers#语法#谁   在那个主机=(以谁的身份)  执行什么命令who   which_hosts=(runas)      commands  eg： xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermodsudo  -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T05:31:04.149Z">
+<meta property="og:updated_time" content="2018-01-29T05:47:14.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django 模板(V)">
-<meta name="twitter:description" content="创建模板文件夹1mkdir projecct_name/app_name/templates/app_name 模板基本操作12345678#编辑应用首页模板edit projecct_name/app_name/templates/app_name/index.html#嵌入代码&amp;#123;% code %&amp;#125;#嵌入变量&amp;#123;&amp;#123; var &amp;#125;&amp;#125;#嵌入 u">
+<meta name="twitter:title" content="Linux sudo详解">
+<meta name="twitter:description" content="使得用户以其他用户的身份通过主机执行命令  简介123456789101112#默认保存权限5分钟#配置文件/etc/sudoers#语法#谁   在那个主机=(以谁的身份)  执行什么命令who   which_hosts=(runas)      commands  eg： xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermodsudo  -">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Python_Django_templates.html"/>
+  <link rel="canonical" href="http://yoursite.com/Linux_sudo.html"/>
 
 
 
 
 
-  <title>Django 模板(V) | Lianyi Blog</title>
+  <title>Linux sudo详解 | Lianyi Blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Python_Django_templates.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux_sudo.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lian yi">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Django 模板(V)</h1>
+          <h1 class="post-title" itemprop="name headline">Linux sudo详解</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T13:31:04+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T13:47:14+08:00">
+                2018-01-29
               </time>
             
 
@@ -371,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -388,7 +388,7 @@
 
           
           
-             <span id="/Python_Django_templates.html" class="leancloud_visitors" data-flag-title="Django 模板(V)">
+             <span id="/Linux_sudo.html" class="leancloud_visitors" data-flag-title="Linux sudo详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -442,11 +442,15 @@
       
 
       
-        <h3 id="创建模板文件夹"><a href="#创建模板文件夹" class="headerlink" title="创建模板文件夹"></a>创建模板文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir projecct_name/app_name/templates/app_name</span><br></pre></td></tr></table></figure>
-<h3 id="模板基本操作"><a href="#模板基本操作" class="headerlink" title="模板基本操作"></a>模板基本操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#编辑应用首页模板</span></span><br><span class="line">edit projecct_name/app_name/templates/app_name/index.html</span><br><span class="line"><span class="comment">#嵌入代码</span></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line"><span class="comment">#嵌入变量</span></span><br><span class="line">&#123;&#123; var &#125;&#125;</span><br><span class="line"><span class="comment">#嵌入 url, url_name 为设置url.path时填写的name内容</span></span><br><span class="line">&#123;% url <span class="string">'app_name:url_name'</span> var%&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>使得用户以其他用户的身份通过主机执行命令</p>
+</blockquote>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#默认保存权限5分钟</span></span><br><span class="line"><span class="comment">#配置文件</span></span><br><span class="line">/etc/sudoers</span><br><span class="line"></span><br><span class="line"><span class="comment">#语法</span></span><br><span class="line"><span class="comment">#谁   在那个主机=(以谁的身份)  执行什么命令</span></span><br><span class="line">who   which_hosts=(runas)      commands  </span><br><span class="line">eg：</span><br><span class="line"> xx   ALL=(root)  /usr/sbin/useradd,/usr/sbin/usermod</span><br><span class="line">sudo</span><br><span class="line">  -k   <span class="comment">#不保存权限</span></span><br><span class="line">  -l   <span class="comment">#列出当前用户可以使用的所有的sudo类命令</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> a %&#125;</span><br><span class="line">  &#123;&#123; a &#125;&#125;</span><br><span class="line">&#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">  &lt;p&gt; empty&lt;/p&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="静态文件"><a href="#静态文件" class="headerlink" title="静态文件"></a>静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">edit projecct_name/app_name/templates/app_name/index.html</span><br><span class="line"></span><br><span class="line">&#123;#加载静态文件#&#125;</span><br><span class="line">&#123;% load static %&#125;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&#123;% static &apos;polls/css/style.css&apos; %&#125;&quot; /&gt;</span><br><span class="line">&lt;img src=&quot;&#123;% static &apos;polls/images/one.jpg&apos; %&#125;&quot; alt=&quot;静态图片&quot; &gt;</span><br></pre></td></tr></table></figure>
+<h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#别名必须全部而且只能使用大写英文字母</span></span><br><span class="line"><span class="comment">#可使用！ 取反</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#用户别名</span></span><br><span class="line">who:User_Alias</span><br><span class="line">User_Alias USERADMIN=</span><br><span class="line">    <span class="comment">#用户的用户名</span></span><br><span class="line">    <span class="comment">#组名，使用%引导</span></span><br><span class="line">    <span class="comment">#还可以包含其它已经定义的用户别名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#主机别名</span></span><br><span class="line">which_hosts:Host_Alias</span><br><span class="line">    <span class="comment">#主机名</span></span><br><span class="line">    <span class="comment">#ip</span></span><br><span class="line">    <span class="comment">#网络地址</span></span><br><span class="line">    <span class="comment">#其他主机别名</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#运行用户别名</span></span><br><span class="line"> runas:Runas_Alias</span><br><span class="line">    <span class="comment">#用户名</span></span><br><span class="line">    <span class="comment">#%组名</span></span><br><span class="line">    <span class="comment">#其他Runas别名</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#命令别名</span></span><br><span class="line"><span class="built_in">command</span>:Cmnd_Alias</span><br><span class="line">    <span class="comment">#命令路径</span></span><br><span class="line">    <span class="comment">#目录(此目录内的所有命令)</span></span><br><span class="line">    <span class="comment">#其他事先定义过的命令别名</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>已经看不懂了…..</p>
+</blockquote>
 
       
     </div>
@@ -464,7 +468,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Django/" rel="tag"># Django</a>
+            <a href="/tags/OS/" rel="tag"># OS</a>
           
         </div>
       
@@ -477,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Python_Django_static.html" rel="next" title="Django 静态文件">
-                <i class="fa fa-chevron-left"></i> Django 静态文件
+              <a href="/Linux_root.html" rel="next" title="Linux 禁止root远程登陆">
+                <i class="fa fa-chevron-left"></i> Linux 禁止root远程登陆
               </a>
             
           </div>
@@ -486,10 +490,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Python_Crawler_request.html" rel="prev" title="爬虫：request库获取页面">
-                爬虫：request库获取页面 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -676,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建模板文件夹"><span class="nav-number">1.</span> <span class="nav-text">创建模板文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板基本操作"><span class="nav-number">2.</span> <span class="nav-text">模板基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">3.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态文件"><span class="nav-number">4.</span> <span class="nav-text">静态文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#别名"><span class="nav-number">2.</span> <span class="nav-text">别名</span></a></li></ol></div>
             
 
           </div>
