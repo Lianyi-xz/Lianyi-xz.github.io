@@ -1,6 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Docker Swarm 实验]]></title>
+    <url>%2FDevops_Docker_Swarm_example.html</url>
+    <content type="text"><![CDATA[基本环境 manager：10.10.0.132 work1：10.10.0.133 work2：10.10.0.134 创建swarm1234docker swarm init --advertise-addr 10.10.0.132 #初始化Docker引擎集群docker info #查看swarm状态docker node ls #查看swarm相关节点docker swarm ca --rotate #生成新的CA证书和密钥 swarm中添加节点12345678docker swarm join-token worker #检索worker的添加命令docker swarm join-token --rotate worker #生成新的worker令牌docker swarm join-token manager #检索manager的添加命令docker node promote &lt;node name&gt; #工作节点提升为管理节点docker node demote &lt;node name&gt; #管理节点降级为工作节点docker swarm join \ #添加工作节点到swarm --token SWMTKN-1-34lurdcnbjpbxszzi47gw2l8hbjdzy7vjzcxe38ay776pbe8lj-9ao0aojs37006socamuioe3ht \ 10.10.0.132:2377 查看节点信息123docker node inspect node_iddocker node inspect --pretty node_iddocker swarm leave #离开swarm 部署应用服务12345docker service create \ --replicas 1 \ #在一个容器上运行服务 --name hello \ #服务名称 centos \ #服务所使用镜像，不加标签 默认使用 laster镜像，服务运行节点需存在镜像 ping 10.10.0.134 #容器运行的服务 查看swarm运行服务123docker service inspect service_name #查看服务详细信息docker service inspect --pretty service_namedocker service ps service_name #查看服务在那些节点运行 修改服务运行容器数量1docker service scale &lt;SERVICE-ID&gt;=&lt;NUMBER-OF-TASKS&gt; 删除服务1docker service rm service_name 服务更新1docker service update &lt;SERVICE-ID&gt; 服务滚动更新(创建服务时添加)12--update-delay 10s 配置更新服务任务或任务组之间的时间延迟--update-parallelism 配置调度程序同时更新的最大服务任务数。 排空一个节点1docker node update --availability drain &lt;NODE-ID&gt; 发布服务端口1docker service create --name ser_name --publish published=主机端口,target=容器端口 image 发布现有服务端口1docker service update --publish-add published=主机端口,target=容器端口 service_name 查看服务发布端口1docker service inspect --format="&#123;&#123;json .Endpoint.Spec.Ports&#125;&#125;" service_name 仅发布udp端口12--publish published=53,target=53,protocol=udp-p 53:53/udp]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker Swarm(集群)]]></title>
+    <url>%2FDevops_Docker_Swarm_base.html</url>
+    <content type="text"><![CDATA[Swarm模式 Docker1.12.0或更高版本 使用Docker CLI 创建Swarm，将应用程序部署到swarm，并管理swarm行为 当前版本Docker包含swarm模式，用于本地管理的docker引擎集群被称为swarm swarm概念 swarm是由多个Docker主机组成，这些主机以swarm模式运行 分为管理者(管理成员和委托)和工作者(运行swarm服务) 给定Docker主机可以是管理者、工作者，或执行这两个角色 修改服务配置，无需重新启动服务 可在参与swarm的任何Docker主机以及swarm服务商运行独立容器 可以定义并运行swarm服务 节点 节点是docker引擎参与swarm的一个实例，可视为Docker节点 可在单台物理计算机或云服务器上运行一个或多个节点 生产swarm部署通常包括分布在多台物理机和云计算机上的Docker节点 若将应用程序部署到swarm，需要将服务定义提交给管理节点，管理节点将称为任务的工作单元分配给工作节点 服务和任务 服务是任务的定义，在管理或工作节点执行 创建服务时，指定使用那个容器镜像以及在运行容器中执行那些命令 对于复制服务模型，swarm管理器根据所需状态中设置的比例在节点之间分配指定数量的副本任务 对于全局服务，swarm在集群中的每个可用节点上运行一项服务任务 一个任务携带Docker容器和在容器内运行的命令，是swarm的原子调度单位。 管理器节点根绝服务规模中设置的副本数量将任务分配给工作节点，一旦任务分配给一个节点，他就不能移动到另一个节点，只能在分配的节点上运行或失败。 负载均衡 swarm管理器使用入口负载均衡来暴露对swarm外部提供的服务 swarm管理器可自动将服务分配给一个PublishedPort(30000-32767)，可配置 外部组件可以访问swarm中任何节点的已发布端口上的服务 Swarm模式有一个内部的DNS组件，可以自动为swarm中的每个服务配置一个DNS条目]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker Registry(私有仓库)]]></title>
+    <url>%2FDevops_Docker_registry.html</url>
+    <content type="text"><![CDATA[Registry:官方提供用于构建私有镜像仓库的工具 Registry 基本配置1234567docker run -d -e REGISTRY_HTTP_ADDR =0.0.0.0:5001 #registry侦听容器内的5001端口 -p 5001:5001 #主机端口:容器内端口 --name #设置容器名称 --restart=always #为registry配置重新启动策略 -v /mnt/registry:/var/lib/refistry #主机目录:容器目录 设置目录挂载 registry:2 registry镜像名 运行 Registry123456789101112131415161718#下载registry镜像 docker pull registry.docker-cn.com/library/registry:2 docker tag registry.docker-cn.com/library/registry:2 registry:2 标记镜像 #启动registry镜像 docker run -d -p 5000:5000 --name registry registry:2#标记镜像，指向本地registry docker tag lianyi/ubuntu:v1.0 localhost:5000/ubuntu:v1.0#推送镜像到本地registry docker push localhost:5000/ubuntu:v1.0#删除本地缓存 images docker image rm localhost:5000/ubuntu:v1.0 #关闭本地registry 并删除所有数据 docker stop registry &amp;&amp; docker rm -v registry 参考文档官方文档开启https基本认证使用Compose文件部署registry]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker Hub (公有仓库)]]></title>
+    <url>%2FDevops_Docker_hub.html</url>
+    <content type="text"><![CDATA[网址Docker Hub 登陆 docker login 命令来输入用户名、密码和邮箱完成注册和登陆 注册成功后，本地用户目录的.dockercfg中奖保存用户的认证信息 基本操作123docker search #查找官方仓库中的镜像docker pull #下载镜像到本地docker push #上传镜像到仓库]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker Container (容器)]]></title>
+    <url>%2FDevops_Docker_container.html</url>
+    <content type="text"><![CDATA[运行容器1234567891011121314151617181920212223#基于镜像运行容器 docker run -t -i ubuntu:14.04 /bin/bash #-t 分配一个伪终端并与容器绑定 #-i 让容器标准输入保持打开 #-d 在后台运行容器并打印容器ID #--name 为容器自定义命名 #--rm 容器终止后立刻删除，--rm与-d参数不能同时使用 #容器是一个服务 运行/bin/bash有将其做虚拟机使用的悬疑。。。 #查看运行容器docker ps#查看终止状态容器docker ps -a#停止容器docker stop [CONTAINER ID]#启动已终止容器docker start [CONTAINER ID]#重启容器docker restart 进入容器123456789#attach命令#当多个窗口同时attach到一个容器的时候，所有窗口都会同步显示 docker attach [CONTAINER ID/NAMES] #nsenter命令#在util-linux包2.23版本后包含，若无需安装#nsenter 可以访问另一个进程的名字空间，需root权限 PID=$(docker inspect --format "&#123;&#123; .State.Pid &#125;&#125;" [CONTAINER ID]) nsenter --target $PID --mount --uts --ipc --net --pid 删除容器12#删除在运行的容器，可以添-f参数docker rm [CONTAINER ID] 其它相关命令12345678#守护态运行 #启动时添加 -d 参数#查看容器名字 docker inspect -f "&#123;&#123; .Name &#125;&#125;" [CONTAINER ID] #获取容器的输出信息 docker logs [docker names]]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker CE 安装]]></title>
+    <url>%2FDevops_Docker_install.html</url>
+    <content type="text"><![CDATA[安装步骤仅为参考，疑问请参考官方文档 系统要求 Zesty 17.04 Xenial 16.04 (LTS) Trusty 14.04 (LTS) 卸载旧版本Docker1sudo apt-get remove docker &lt;!-- more --&gt;docker-engine docker.io 更换默认存储驱动程序Docker默认使用overlay2，官方建议替换为aufs，在此未作配置修改。 安装Docker CE12345678910111213141516171819#更新包索引sudo apt-get update#安装软件包,以允许apt通过HTTPS使用存储库sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common#添加Docker的官方GPG密钥curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -#设置软件源信息sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"#更新并安装Docker CEsudo apt-get -y updatesudo apt-get -y install docker-ce 安装指定版本的Docker CE12345#查找Docker-CE的版本apt-cache madison docker-ce#安装指定版本的Docker CEsudo apt-get -y install docker-ce=[VERSION] docker授权12#将操作 docker 用户，加入 docker 组，为该用户赋予操作 docker 的权限sudo usermod -aG docker $USER 参考文档Docker GuidesAliyun Docker CE 镜像源站Docker Guides AUFS storage]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ELK日志平台]]></title>
+    <url>%2FDevops_ELK_base.html</url>
+    <content type="text"><![CDATA[ELK简介ELK:集中式WEB日志收集平台ELK=ElasticSearch+Logstash+Kiabana ElasticSearch：开源分布式搜索引擎 Logstash：开源日志收集、过滤工具 Kiabana：提供web界面 未写完 先看一下 jenkins]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>ELK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker Image (镜像)]]></title>
+    <url>%2FDevops_Docker_image.html</url>
+    <content type="text"><![CDATA[获取镜像12345docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;#Registry地址 &lt;域名/IP&gt;[:端口号] 默认地址是Docker Hub#仓库名 &lt;用户名&gt;/&lt;软件名&gt; 对于Docker Hub 不给出仓库名默认为Library(官网镜像)#docker pull registry.docker-cn.com/library/ubuntu:14.04 列出镜像12345678910111213#列出顶级镜像docker images#列出中间镜像docker images -a #列出部分镜像docker images 仓库名 标签# 虚悬镜像#仓库名和标签均为&lt;none&gt;的镜像#删除虚悬镜像docker rmi $(docker images -q -f dangling=true) 创建镜像利用DockerFile创建镜像 存入和载出镜像利用仓库来存入和载出镜像 删除本地镜像12#删除镜像之前使用 docker rm 删除依赖该镜像的所有容器docker rmi 镜像名:标签]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker 镜像加速器]]></title>
+    <url>%2FDevops_Docker_Image_accelerator.html</url>
+    <content type="text"><![CDATA[常用加速器1234567#Docker 官方的中国镜像加速器https://registry.docker-cn.com#中国科技大学的镜像加速器https://docker.mirrors.ustc.edu.cn/#其它（需登陆）https://cr.console.aliyun.com/#/accelerator #阿里云加速器https://www.daocloud.io/mirror#accelerator-doc #DaoCloud加速器 Ubuntu 14.04 配置加速器（或其它使用 Upstart 的系统） 1234567891011#编辑配置文件sudo vim /etc/default/docker#添加加速器地址DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com"#重启 Docker 引擎sudo service docker restart#查看配置sudo ps -ef | grep dockerd Ubuntu 16.04 或 CentOS 7 配置加速器（或其它使用 Systemd 的系统）123456789101112#编辑配置文件sudo vi /etc/systemd/system/multi-user.target.wants/docker.service#添加加速器地址ExecStart=/usr/bin/dockerd --registry-mirror=https://registry.docker-cn.com#重新加载配置并启动服务sudo systemctl daemon-reloadsudo systemctl restart docker#查看配置sudo ps -ef | grep dockerd 参考文档Docker问答录]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker概念]]></title>
+    <url>%2FDevops_Docker_base.html</url>
+    <content type="text"><![CDATA[镜像 一个特殊的文件系统，包含了操作系统完整的root文件系统 提供容器运行时所需的程序、库、资源、配置等文件 包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等） 容器 镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停 实质是进程，运行于属于自己的独立的命名空间 容器进程直接运行于宿主内核中 运行时会创建一个为容器运行时读写而准备的存储层：容器存储层 仓库 集中的存储、分发镜像 可包含多个仓库，每个仓库可以包含多个标签，每个标签对应一个镜像 使用&lt;仓库名&gt;:&lt;标签&gt; 指定具体软件版本的镜像，不给出标签默认使用latest标签 参考文档Docker —— 从入门到实践]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux 中ASCII显示图片]]></title>
+    <url>%2FLinux_image.html</url>
+    <content type="text"><![CDATA[在ubuntu中实现，且并没有什么实用价值的小技能 安装ImageMagick1sudo apt-get install imagemagick 安装aview1sudo apt-get install aview 执行转换命令12#psb.jpg 为需要转换的图片asciiview psb.jpg -driver curses 效果展示]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux sudo详解]]></title>
     <url>%2FLinux_sudo.html</url>
     <content type="text"><![CDATA[使得用户以其他用户的身份通过主机执行命令 简介123456789101112#默认保存权限5分钟#配置文件/etc/sudoers#语法#谁 在那个主机=(以谁的身份) 执行什么命令who which_hosts=(runas) commands eg： xx ALL=(root) /usr/sbin/useradd,/usr/sbin/usermodsudo -k #不保存权限 -l #列出当前用户可以使用的所有的sudo类命令 别名12345678910111213141516171819202122232425262728#别名必须全部而且只能使用大写英文字母#可使用！ 取反#用户别名who:User_AliasUser_Alias USERADMIN= #用户的用户名 #组名，使用%引导 #还可以包含其它已经定义的用户别名#主机别名which_hosts:Host_Alias #主机名 #ip #网络地址 #其他主机别名 #运行用户别名 runas:Runas_Alias #用户名 #%组名 #其他Runas别名 #命令别名command:Cmnd_Alias #命令路径 #目录(此目录内的所有命令) #其他事先定义过的命令别名 已经看不懂了…..]]></content>
@@ -42,17 +163,6 @@
       </categories>
       <tags>
         <tag>防火墙</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ELK日志平台]]></title>
-    <url>%2FDevops_ELK_base.html</url>
-    <content type="text"><![CDATA[ELK简介ELK:集中式WEB日志收集平台ELK=ElasticSearch+Logstash+Kiabana ElasticSearch：开源分布式搜索引擎 Logstash：开源日志收集、过滤工具 Kiabana：提供web界面]]></content>
-      <categories>
-        <category>运维</category>
-      </categories>
-      <tags>
-        <tag>ELK</tag>
       </tags>
   </entry>
   <entry>
