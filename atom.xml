@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-30T07:23:42.283Z</updated>
+  <updated>2018-02-01T07:57:04.182Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins部署</title>
+    <link href="http://yoursite.com/Devops_Jinkens_install.html"/>
+    <id>http://yoursite.com/Devops_Jinkens_install.html</id>
+    <published>2018-02-01T07:57:04.179Z</published>
+    <updated>2018-02-01T07:57:04.182Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>经果四天的研究，我成功变成了智障  有缘再看吧</p></blockquote><h3 id="docker-运行Jenkins"><a href="#docker-运行Jenkins" class="headerlink" title="docker 运行Jenkins"></a>docker 运行Jenkins</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> \</span><br><span class="line">  --rm \</span><br><span class="line">  -u root \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -v jenkins-data:/var/jenkins_home \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \</span><br><span class="line">  -v "$HOME":/home \</span><br><span class="line">  jenkinsci/blueocean</span><br></pre></td></tr></table></figure><h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/" target="_blank" rel="noopener">官方文档</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;经果四天的研究，我成功变成了智障  有缘再看吧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;docker-运行Jenkins&quot;&gt;&lt;a href=&quot;#docker-运行Jenkins&quot; class=&quot;headerlink&quot; title=&quot;do
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yoursite.com/categories/Devops/"/>
+    
+    
+      <category term="Jenkins" scheme="http://yoursite.com/tags/Jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker Swarm 实验</title>
@@ -481,28 +509,6 @@
     
       &lt;h3 id=&quot;创建模板文件夹&quot;&gt;&lt;a href=&quot;#创建模板文件夹&quot; class=&quot;headerlink&quot; title=&quot;创建模板文件夹&quot;&gt;&lt;/a&gt;创建模板文件夹&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir projecct_name/app_name/templates/app_name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;模板基本操作&quot;&gt;&lt;a href=&quot;#模板基本操作&quot; class=&quot;headerlink&quot; title=&quot;模板基本操作&quot;&gt;&lt;/a&gt;模板基本操作&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#编辑应用首页模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;edit projecct_name/app_name/templates/app_name/index.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#嵌入代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% code %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#嵌入变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;#123; var &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#嵌入 url, url_name 为设置url.path时填写的name内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% url &lt;span class=&quot;string&quot;&gt;&#39;app_name:url_name&#39;&lt;/span&gt; var%&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
-    
-    
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django 静态文件</title>
-    <link href="http://yoursite.com/Python_Django_static.html"/>
-    <id>http://yoursite.com/Python_Django_static.html</id>
-    <published>2018-01-25T05:29:16.058Z</published>
-    <updated>2018-01-25T05:29:16.062Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="创建静态文件"><a href="#创建静态文件" class="headerlink" title="创建静态文件"></a>创建静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建 css、js、图片文件夹</span></span><br><span class="line"> mkdir projecct_name/app_name/static/app_name/css/</span><br><span class="line"> mkdir projecct_name/app_name/static/app_name/js/</span><br><span class="line"> mkdir projecct_name/app_name/static/app_name/images/</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="编辑静态文件"><a href="#编辑静态文件" class="headerlink" title="编辑静态文件"></a>编辑静态文件</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">edit projecct_name/app_name/static/app_name/css/style.css</span><br><span class="line"><span class="selector-tag">li</span>  <span class="selector-tag">a</span>  &#123; </span><br><span class="line">    <span class="attribute">color </span>: green ; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>  &#123; </span><br><span class="line">    <span class="attribute">background </span>: white  url （<span class="string">"../images/background.gif"</span>） no-repeat  right  bottom ; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="使用静态文件"><a href="#使用静态文件" class="headerlink" title="使用静态文件"></a>使用静态文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">edit projecct_name/app_name/templates/app_name/index.html</span><br><span class="line"></span><br><span class="line">&#123;#加载静态文件#&#125;</span><br><span class="line">&#123;% load static %&#125;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&#123;% static &apos;polls/css/style.css&apos; %&#125;&quot; /&gt;</span><br><span class="line">&lt;img src=&quot;&#123;% static &apos;polls/images/one.jpg&apos; %&#125;&quot; alt=&quot;静态图片&quot; &gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;创建静态文件&quot;&gt;&lt;a href=&quot;#创建静态文件&quot; class=&quot;headerlink&quot; title=&quot;创建静态文件&quot;&gt;&lt;/a&gt;创建静态文件&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#创建 css、js、图片文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; mkdir projecct_name/app_name/static/app_name/css/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; mkdir projecct_name/app_name/static/app_name/js/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; mkdir projecct_name/app_name/static/app_name/images/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Jenkins部署]]></title>
+    <url>%2FDevops_Jinkens_install.html</url>
+    <content type="text"><![CDATA[经果四天的研究，我成功变成了智障 有缘再看吧 docker 运行Jenkins12345678docker run \ --rm \ -u root \ -p 8080:8080 \ -v jenkins-data:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ -v "$HOME":/home \ jenkinsci/blueocean 参考文档官方文档]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker Swarm 实验]]></title>
     <url>%2FDevops_Docker_Swarm_example.html</url>
     <content type="text"><![CDATA[基本环境 manager：10.10.0.132 work1：10.10.0.133 work2：10.10.0.134 创建swarm1234docker swarm init --advertise-addr 10.10.0.132 #初始化Docker引擎集群docker info #查看swarm状态docker node ls #查看swarm相关节点docker swarm ca --rotate #生成新的CA证书和密钥 swarm中添加节点12345678docker swarm join-token worker #检索worker的添加命令docker swarm join-token --rotate worker #生成新的worker令牌docker swarm join-token manager #检索manager的添加命令docker node promote &lt;node name&gt; #工作节点提升为管理节点docker node demote &lt;node name&gt; #管理节点降级为工作节点docker swarm join \ #添加工作节点到swarm --token SWMTKN-1-34lurdcnbjpbxszzi47gw2l8hbjdzy7vjzcxe38ay776pbe8lj-9ao0aojs37006socamuioe3ht \ 10.10.0.132:2377 查看节点信息123docker node inspect node_iddocker node inspect --pretty node_iddocker swarm leave #离开swarm 部署应用服务12345docker service create \ --replicas 1 \ #在一个容器上运行服务 --name hello \ #服务名称 centos \ #服务所使用镜像，不加标签 默认使用 laster镜像，服务运行节点需存在镜像 ping 10.10.0.134 #容器运行的服务 查看swarm运行服务123docker service inspect service_name #查看服务详细信息docker service inspect --pretty service_namedocker service ps service_name #查看服务在那些节点运行 修改服务运行容器数量1docker service scale &lt;SERVICE-ID&gt;=&lt;NUMBER-OF-TASKS&gt; 删除服务1docker service rm service_name 服务更新1docker service update &lt;SERVICE-ID&gt; 服务滚动更新(创建服务时添加)12--update-delay 10s 配置更新服务任务或任务组之间的时间延迟--update-parallelism 配置调度程序同时更新的最大服务任务数。 排空一个节点1docker node update --availability drain &lt;NODE-ID&gt; 发布服务端口1docker service create --name ser_name --publish published=主机端口,target=容器端口 image 发布现有服务端口1docker service update --publish-add published=主机端口,target=容器端口 service_name 查看服务发布端口1docker service inspect --format="&#123;&#123;json .Endpoint.Spec.Ports&#125;&#125;" service_name 仅发布udp端口12--publish published=53,target=53,protocol=udp-p 53:53/udp]]></content>
