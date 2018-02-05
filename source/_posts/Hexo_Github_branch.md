@@ -23,3 +23,27 @@ git push --set-upstream origin hexo
 ### 迁移博客原文件
 * 删除 d/hexo/Lianyi-xz.github.io 中文件
 * 将博客原文件复制到 d/hexo/Lianyi-xz.github.io 中
+* 将themes目录以内中的主题的.git目录删除
+
+### 提交hexo分支
+```bash
+git add .
+git commit -m "source blog"
+git push
+```
+
+###  部署hexo
+```bash
+#下载原文件
+git clone https://github.com/Lianyi-xz/Lianyi-xz.github.io.git
+#安装hexo
+npm install hexo --save
+npm install hexo-cli -g
+# 生成静态文件
+hexo g
+# 本地运行博客
+hexo server
+#博客内容上传到github
+hexo g -d
+# 运行提交hexo分支内容 来提交修改的hexo原文件
+```
