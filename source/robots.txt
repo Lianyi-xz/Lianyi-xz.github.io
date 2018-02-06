@@ -10,6 +10,5 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-
 Sitemap: http://sosad.cn/sitemap.xml
 Sitemap: http://sosad.cn/baidusitemap.xml
