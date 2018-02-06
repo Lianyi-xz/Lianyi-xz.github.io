@@ -1,6 +1,7 @@
 title: Docker CE 安装
 tags: Docker
 categories: 运维
+date: 2018-01-30
 ---
 > 安装步骤仅为参考，疑问请参考官方文档
 
@@ -11,9 +12,9 @@ categories: 运维
 
 ### 卸载旧版本Docker
 ```shell
-sudo apt-get remove docker <!-- more -->docker-engine docker.io
+sudo apt-get remove docker docker-engine docker.io
 ```
-
+<!-- more -->
 ### 更换默认存储驱动程序
 Docker默认使用`overlay2`，官方建议替换为`aufs`，在此未作配置修改。
 

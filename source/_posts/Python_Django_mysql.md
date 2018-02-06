@@ -1,6 +1,7 @@
 title: Django 连接mysql
 tags: [Django,MySQL]
 categories: Python
+date: 2018-01-15
 ---
 >仅适用于python3
 

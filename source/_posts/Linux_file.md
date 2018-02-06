@@ -1,6 +1,7 @@
 title: Linux 文件与目录
 tags: OS
 categories: Linux
+date: 2018-01-10
 ---
 ### 目录简单使用
 #### linux路径

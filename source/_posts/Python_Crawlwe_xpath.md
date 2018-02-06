@@ -1,6 +1,7 @@
 title: 爬虫：xpath 提取数据
 tags: 爬虫
 categories: Python
+date: 2018-01-25
 ---
 ### lxml 安装
 ```bash

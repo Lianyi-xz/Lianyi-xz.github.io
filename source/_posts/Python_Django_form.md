@@ -1,6 +1,7 @@
 title: Django 表单
 tags: Django
 categories: Python
+date: 2018-01-25
 ---
 
 > 简单的表单案例

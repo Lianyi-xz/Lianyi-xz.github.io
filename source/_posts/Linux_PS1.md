@@ -1,6 +1,7 @@
 title: Linux 终端提示符
 tags: OS
 categories: Linux
+date: 2018-01-10
 ---
 #### 设置终端提示符步骤
 1. 修改环境变量

@@ -1,6 +1,7 @@
 title: Docker Swarm(集群)
 tags: Docker
 categories: 运维
+date: 2018-01-30
 ---
 ### Swarm模式
   * Docker1.12.0或更高版本

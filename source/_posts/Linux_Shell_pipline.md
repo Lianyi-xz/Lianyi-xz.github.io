@@ -1,6 +1,7 @@
 title: Shell 重定向与管道
 tags: Shell
 categories: Linux
+date: 2018-01-10
 ---
 
 ### 数据重定向

@@ -1,6 +1,7 @@
 title: Django 基本操作
 tags: Django
 categories: Python
+date: 2018-01-15
 ---
 
 ### 创建Django

@@ -1,6 +1,7 @@
 title: Django url
 tags: Django
 categories: Python
+date: 2018-01-15
 ---
 >添加应用路径前，需创建应用
 

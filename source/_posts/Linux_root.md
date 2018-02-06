@@ -1,6 +1,7 @@
 title: Linux 禁止root远程登陆
 tags: OS
 categories: Linux
+date: 2018-01-29
 ---
 
 ### 创建新用户

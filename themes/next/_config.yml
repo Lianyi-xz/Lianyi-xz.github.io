@@ -2,11 +2,12 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 
+
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Devops,Learn,Student"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -21,7 +22,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 # Specify the date when the site was setup
-since: 2018
+since: 2017
 
 # icon between year and author @Footer
 authoricon: heart
@@ -40,7 +41,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -60,6 +61,8 @@ menu:
   about: /about/
   #sitemap: /sitemap.xml
   #commonweal: /404/
+  #sitemap: /sitemap.xml
+  #baidusitemap: /baidusitemap.xml
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -103,7 +106,6 @@ social:
   GitHub: https://github.com/Lianyi-xz
   E-Mail: mailto:zhaoran_xz@163.com
   微博: https://weibo.com/u/6375117580
-  知乎: https://www.zhihu.com/people/lian-yi-zhi-wai/activities
 
 # Social Links Icons
 # Icon Mapping:
@@ -134,7 +136,9 @@ social_icons:
 #links_layout: inline
 #links:
   #Title: http://example.com/
-
+links_title: 小伙伴
+links:
+  安小下: https://linganmin.cn/
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
@@ -469,7 +473,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page

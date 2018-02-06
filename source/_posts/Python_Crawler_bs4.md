@@ -1,6 +1,7 @@
 title: 爬虫：Beautiful Soup库-提取数据
 tags: 爬虫
 categories: Python
+date: 2018-01-25
 ---
 ### beautifulsoup安装
 ```bash

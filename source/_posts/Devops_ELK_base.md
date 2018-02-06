@@ -1,6 +1,7 @@
 title: ELK日志平台
 tags: ELK
 categories: 运维
+date: 2018-01-29
 ---
 ### ELK简介
 ELK:集中式WEB日志收集平台  

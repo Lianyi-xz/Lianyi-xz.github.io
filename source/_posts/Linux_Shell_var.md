@@ -1,6 +1,7 @@
 title: Shell 变量
 tags: Shell
 categories: Linux
+date: 2018-01-10
 ---
 ### 变量命名规则
 1. 变量与内容使用 `=`号连接，`=`两边不加空格

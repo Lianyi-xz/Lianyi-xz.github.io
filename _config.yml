@@ -4,9 +4,9 @@
 
 # Site
 title: Lianyi Blog
-subtitle:
-description: 靠气势吃饭的手艺人
-author: Lian yi
+subtitle: 靠气势吃饭的手艺人
+description: Docker | Python | Linux | MySQL | Git | Devops
+author: 昭然
 language: zh-Hans
 timezone:
 
@@ -19,7 +19,7 @@ search:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: sosad.cn
 root: /
 permalink: :title.html
 permalink_defaults:
@@ -82,6 +82,26 @@ tag_map:
   Jenkins: Jenkins
 
 
+# hexo-neat
+
+neat_enable: true
+
+neat_html:
+  enable: true
+  exclude:
+
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date

@@ -1,6 +1,7 @@
 title: Django 模板(V)
 tags: Django
 categories: Python
+date: 2018-01-15
 ---
 
 ### 创建模板文件夹

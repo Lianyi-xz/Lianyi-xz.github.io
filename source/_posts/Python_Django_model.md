@@ -1,6 +1,7 @@
 title: Django 模型(M)
 tags: Django
 categories: Python
+date: 2018-01-15
 ---
 ### 部分字段类型
 ```bash

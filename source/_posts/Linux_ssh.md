@@ -1,6 +1,7 @@
 title: Linux 免密登陆
 tags: OS
 categories: Linux
+date: 2018-01-29
 ---
 
 ### 配置Linux主机ssh无密码访问

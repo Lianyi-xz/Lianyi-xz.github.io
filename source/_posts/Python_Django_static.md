@@ -1,6 +1,7 @@
 title: Django 静态文件
 tags: Django
 categories: Python
+date: 2018-01-25
 ---
 
 ### 创建静态文件

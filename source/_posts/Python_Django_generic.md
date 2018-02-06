@@ -1,6 +1,7 @@
 title: Django 通用视图
 tags: Django
 categories: Python
+date: 2018-01-25
 ---
 >并不能git到有什么作用
 

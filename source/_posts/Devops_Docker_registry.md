@@ -1,6 +1,7 @@
 title: Docker Registry(私有仓库)
 tags: Docker
 categories: 运维
+date: 2018-01-30
 ---
 > Registry:官方提供用于构建私有镜像仓库的工具  
 

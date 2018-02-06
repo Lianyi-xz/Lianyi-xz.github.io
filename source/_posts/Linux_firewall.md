@@ -1,6 +1,7 @@
 title: Linux firewalld设置
 tags: 防火墙
 categories: Linux
+date: 2018-01-10
 ---
 ### firewalld 基本使用
 ```bash

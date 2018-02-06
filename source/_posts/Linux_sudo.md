@@ -1,6 +1,7 @@
 title: Linux sudo详解
 tags: OS
 categories: Linux
+date: 2018-01-29
 ---
 > 使得用户以其他用户的身份通过主机执行命令
 

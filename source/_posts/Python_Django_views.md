@@ -1,6 +1,7 @@
 title: Django 控制器(C)
 tags: Django
 categories: Python
+date: 2018-01-15
 ---
 ### import 模块
 ```python
