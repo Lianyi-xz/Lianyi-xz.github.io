@@ -13,12 +13,12 @@ sudo  apt-get install imagemagick
 ```shell
 sudo apt-get install aview
 ```
-
+<!-- more -->
 ### 执行转换命令
 ```shell
 #psb.jpg 为需要转换的图片
 asciiview psb.jpg -driver curses
 ```
-<!-- more -->
+
 ### 效果展示
 ![](https://ws1.sinaimg.cn/large/006Xrlj6gy1flbrpat9goj30sq0ezqbq.jpg)

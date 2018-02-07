@@ -67,7 +67,7 @@ date: 2018-01-25
 ```
 
 
-### 参考文档
+### 参考资料
 [我的脚本](https://github.com/Lianyi-xz/Crawler-learn/tree/master/request)
 [中文requests](http://cn.python-requests.org/zh_CN/latest/ )  
 [英文requests](http://docs.python-requests.org/en/master/user/quickstart/#json-response-content)

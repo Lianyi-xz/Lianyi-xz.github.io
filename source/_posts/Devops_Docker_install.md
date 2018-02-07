@@ -57,7 +57,7 @@ sudo apt-get -y install docker-ce=[VERSION]
 sudo usermod -aG docker $USER
 ```
 
-### 参考文档
+### 参考资料
 [Docker Guides](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-from-a-package "Docker Guides")  
 [Aliyun Docker CE 镜像源站](https://yq.aliyun.com/articles/110806 "Docker CE 镜像源站")  
 [Docker Guides AUFS storage](https://docs.docker.com/engine/userguide/storagedriver/aufs-driver/ "Docker Guides AUFS storage")

@@ -39,7 +39,7 @@ date: 2018-01-30
   docker stop registry && docker rm -v registry
 ```
 
-### 参考文档
+### 参考资料
 [官方文档](https://docs.docker.com/registry/)  
 [开启https](https://docs.docker.com/registry/deploying/#get-a-certificate)  
 [基本认证](https://docs.docker.com/registry/deploying/#native-basic-auth)  

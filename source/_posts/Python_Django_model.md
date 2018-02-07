@@ -18,7 +18,7 @@ date: 2018-01-15
 #图片类型：ImageField
 #外键：ForeignKey  
 ```
-[字段类型参考文档](http://blog.51cto.com/kevinhao/1699014)
+
 <!-- more -->
 ### 创建模型
 ```python
@@ -66,4 +66,5 @@ python manage.py makemigrations app_name
 ```python
   python manage.py migrate
 ```
-  
+### 参考资料
+[字段类型](http://blog.51cto.com/kevinhao/1699014)

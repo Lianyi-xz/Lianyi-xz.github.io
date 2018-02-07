@@ -16,5 +16,5 @@ docker run \
   -v "$HOME":/home \
   jenkinsci/blueocean
 ```
-### 参考文档
+### 参考资料
 [官方文档](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)

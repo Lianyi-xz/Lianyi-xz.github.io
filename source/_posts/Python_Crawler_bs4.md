@@ -51,6 +51,6 @@ soup.find_all(id="link2")
 soup.find_all("a", class_="sister")
 soup.find_all("a", attrs={"class": "sister"})
 ```
-### 参考文档
+### 参考资料
 [我的脚本](https://github.com/Lianyi-xz/Crawler-learn/tree/master/bs4)  
 [Beautiful Soup 4.2.0](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)

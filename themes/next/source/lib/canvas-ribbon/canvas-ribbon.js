@@ -6,11 +6,11 @@
     targetA = true;
   });
   document.addEventListener("touchmove", (e) => {
-    targetA = false
-  })
+    targetA = false;
+  });
   document.addEventListener("click", (e) => {
-    targetA = true
-  })
+    targetA = true;
+  });
   function e() {
     if (targetA) {
       for (a.clearRect(0, 0, d, r), i = [{

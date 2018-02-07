@@ -35,5 +35,5 @@ from lxml import etree
 1. 右键相应标签-Copy-Copy XPath
 
 
-### 参考文档
+### 参考资料
 [我的脚本](https://github.com/Lianyi-xz/amap-Python/blob/master/nj/crawl.py)

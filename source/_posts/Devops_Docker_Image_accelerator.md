@@ -48,6 +48,5 @@ sudo ps -ef | grep dockerd
 ```
 
 
-### 参考文档  
-
+### 参考资料
 [Docker问答录](https://blog.lab99.org/post/docker-2016-07-14-faq.html#ubuntu-14-04-pei-zhi-jia-su-qi-huo-qi-ta-shi-yong-upstart-de-xi-tong "Docker问答录")

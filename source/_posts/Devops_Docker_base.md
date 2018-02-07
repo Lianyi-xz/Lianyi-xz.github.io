@@ -21,5 +21,5 @@ date: 2018-01-30
 * 可包含多个仓库，每个仓库可以包含多个标签，每个标签对应一个镜像
 * 使用<仓库名>:<标签> 指定具体软件版本的镜像，不给出标签默认使用latest标签
 
-### 参考文档
+### 参考资料
 [Docker —— 从入门到实践](https://doc.yonyoucloud.com/doc/docker_practice/basic_concept/index.html "Docker —— 从入门到实践")
