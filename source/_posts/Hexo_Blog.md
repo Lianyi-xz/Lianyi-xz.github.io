@@ -25,7 +25,7 @@ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
 ### Next主题修改css
 ```css
 vim themes/next/source/css_common_custom/custom.styl
-// Custom styles.
+// 文章风格.
 .post {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -39,7 +39,10 @@ vim themes/next/source/css_common_custom/custom.styl
   // 站点描述
 .site-description {
     font-size: 16px;
-
+}
+  //站点副标题
+.site-subtitle {
+  display: none;
 }
   // 作者名
 .site-author-name {
