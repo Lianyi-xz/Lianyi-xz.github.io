@@ -504,6 +504,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
+# Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: true

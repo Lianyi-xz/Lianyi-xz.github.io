@@ -14,6 +14,7 @@ date: 2018-02-22  14:01:00
 ```bash
 GIT_AUTHOR_DATE=2017-11-25T12:00:00 GIT_COMMITTER_DATE=2017-11-25T12:00:00 git commit --allow-empty -m "gitfiti" > /dev/null
 ```
+<!-- more -->
 ### 实现效果
 ![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fop7b9r5npj30kl05v0sr.jpg)
 ### 参考资料
