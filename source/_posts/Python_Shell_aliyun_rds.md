@@ -69,6 +69,7 @@ for i in apikey:
 ```
 
 ### 参考资料
+[我的代码](https://github.com/Lianyi-xz/shell/blob/master/aliyun_rds.py)  
 [Python SDK列表](https://help.aliyun.com/document_detail/30003.html)  
 [SDK使用参考](https://helpcdn.aliyun.com/document_detail/42700.html?spm=a2c4g.11186623.6.608.Sp66kt)  
 [性能参数表](https://help.aliyun.com/document_detail/26316.html?spm=a2c4g.11186623.6.936.jeShyh)   
