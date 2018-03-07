@@ -1,5 +1,5 @@
 title: Python实现SQL数据转化为json格式
-tags: Shell
+tags: [Shell,Python]
 categories: Python
 date: 2018-02-11 15:28:00
 ---

@@ -80,6 +80,7 @@ tag_map:
   ELK: Elk
   Docker: Docker
   Jenkins: Jenkins
+  Python: Python
 
 
 # hexo-neat
@@ -127,5 +128,5 @@ deploy:
   type: git
   repo:
     github: git@github.com:Lianyi-xz/Lianyi-xz.github.io.git
-    coding: git@git.coding.net:lianyizhiwai/lianyizhiwai.coding.me.git
+    #coding: git@git.coding.net:lianyizhiwai/lianyizhiwai.coding.me.git
   branch: master

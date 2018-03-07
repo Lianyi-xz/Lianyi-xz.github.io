@@ -1,5 +1,5 @@
 title: Python调用阿里云数据库监控数据
-tags: Shell
+tags: [Shell,Python]
 categories: Python
 date: 2018-02-24 14:28:00
 ---
