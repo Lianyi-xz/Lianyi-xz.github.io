@@ -1,7 +1,7 @@
 title: Python 中ASCII显示图片
 tags: Python
 categories: Python
-date: 2018-01-10
+date: 2018-03-08 16:04:00
 ---
 > 在Python3.6.0 中实现，且并没有什么实用价值的小技能
 
@@ -9,7 +9,7 @@ date: 2018-01-10
 ```python
 pip install pillow
 ```
-
+<!-- more -->
 ### 参考代码
 ```python
 from PIL import Image

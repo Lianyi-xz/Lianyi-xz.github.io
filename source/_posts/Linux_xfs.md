@@ -1,4 +1,4 @@
-title: Linux 文件系统(xfs)备份与恢复
+title: Centos7 文件系统(xfs)备份与恢复
 tags: OS
 categories: Linux
 date: 2018-03-02 12:47:00
