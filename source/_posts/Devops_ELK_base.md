@@ -52,20 +52,23 @@ mv logstash-6.1.1 /usr/local/logstash
 vim /usr/local/logstash/config/jvm.options
   -Xms1g                  #设置jvm内存虚拟机堆栈的大小
   -Xmx1g
-#写规则收集日志
+#运行logstash
+./usr/local/logstash/bin/logstash -f /usr/local/logstash/config/etc/logstash.conf
+```
+### 编写日志收集信息
+```bash
+#写规则收集日志  //根据实际需抓取日志编写
 vim /usr/local/logstash/config/etc/logstash.conf
-input {
- stdin { }
+input {  
+ stdin { }  #从标准输入读数据
 }
 output {
- stdout {
- codec => rubydebug{}
- }
+ stdout {  
+ codec => rubydebug{}  #输出到stdout
+ }    
  elasticsearch { 
  hosts => "192.168.1.130" }
 }
-#运行logstash
-./usr/local/logstash/bin/logstash -f /usr/local/logstash/config/etc/logstash.conf
 ```
 ### 配置kibana
 ```bash
