@@ -63,9 +63,9 @@ index_generator:
 default_category: uncategorized
 category_map:
   git: git
-  MySQL: MySQL
+  数据库: SQL
   Linux: Linux
-  运维: Devops_ELK_Search_ip.md
+  运维: Devops
   Python: Python
   杂项: other
 tag_map:
@@ -79,6 +79,7 @@ tag_map:
   爬虫: Crawler
   ELK: Elk
   Docker: Docker
+  Ansible: Ansible
   Jenkins: Jenkins
   Python: Python
 

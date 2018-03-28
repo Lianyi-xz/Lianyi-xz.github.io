@@ -1,6 +1,6 @@
 title: MySQL 数据更新
 tags: MySQL
-categories: MySQL
+categories: 数据库
 date: 2018-03-12 12:28:00
 ---
 >若数据存在则更新，不存在则插入

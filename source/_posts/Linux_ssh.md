@@ -14,3 +14,5 @@ date: 2018-01-29
   or
   ssh-copy-id -i /root/.ssh/id_rsa.pub root@ip 
 ```
+### 参考资料
+[批量ssh认证](https://github.com/Lianyi-xz/shell/blob/master/auto_shell.py)  
