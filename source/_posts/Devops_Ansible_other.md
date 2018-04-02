@@ -18,7 +18,7 @@ ansible_*_interpreter          #指定采用非Python的其他脚本语言
 ### 变量赋值
 * Inventory文件中使用"="号为变量赋值
 * playbook和包含变量设置的配置文件中，使用冒号":"为变量赋值
-
+<!-- more -->
 ### playbook参数
 ```bash
 #限定执行范围

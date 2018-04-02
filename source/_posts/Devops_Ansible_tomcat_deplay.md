@@ -22,6 +22,7 @@ tomcat_http_port: 80
 tomcat_app: /usr/local/apache-tomcat-8.5.29/webapps/test
 tocmat_app_index: index.jsp
 ```
+<!-- more -->
 ### 安装jdk
 ```bash
 - name: install java 1.8
