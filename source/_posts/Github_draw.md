@@ -1,6 +1,6 @@
 title: 伪造Github 提交记录 
 tags: github
-categories: git
+categories: 版本控制
 date: 2018-02-22  14:01:00
 ---
 

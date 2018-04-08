@@ -1,6 +1,6 @@
 title: Docker CE 安装
 tags: Docker
-categories: 运维
+categories: 容器
 date: 2018-01-30
 ---
 > 安装步骤仅为参考，疑问请参考官方文档

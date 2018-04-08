@@ -1,6 +1,6 @@
 title: MySQL 数据备份与还原(LVM)
 tags: MySQL
-categories: 数据库
+categories: DataBase
 date: 2018-03-12 14:30:00
 ---
 >逻辑卷快照，对数据库加读锁然后拍摄快照

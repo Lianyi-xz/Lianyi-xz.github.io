@@ -1,6 +1,6 @@
 title: ELK 报错问题 
 tags: ELK 
-categories: 运维 
+categories: 日志分析 
 date: 2018-02-06 13:27:00
 ---
 ### elasticsearch启动失败

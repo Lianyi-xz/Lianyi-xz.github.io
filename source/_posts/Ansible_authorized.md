@@ -1,6 +1,6 @@
 title: Ansible 添加ssh授权
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-03-19 17:04:00
 ---
 ### 生成ssh

@@ -1,6 +1,6 @@
 title: Ansible 进行项目自动部署（tomcat）
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-03-28 09:04:00
 ---
 > 通过Ansible来安装tomcat并部署新程序

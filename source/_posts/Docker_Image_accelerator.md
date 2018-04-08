@@ -1,6 +1,6 @@
 title: Docker 镜像加速器
 tags: Docker
-categories: 运维
+categories: 容器
 date: 2018-01-30
 ---
 ### 常用加速器

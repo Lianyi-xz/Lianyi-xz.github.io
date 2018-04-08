@@ -1,6 +1,6 @@
 title: Webhooks进行网站的自动化部署
 tags: [github,hexo]
-categories: git
+categories: 版本控制
 date: 2018-03-06 12:48:00
 ---
 

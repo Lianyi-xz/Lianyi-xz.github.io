@@ -1,6 +1,6 @@
 title: Jenkins部署
 tags: Jenkins
-categories: 运维
+categories: 自动化
 date: 2018-02-1
 ---
 > 经果四天的研究，我成功变成了智障  有缘再看吧

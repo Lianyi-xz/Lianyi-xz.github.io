@@ -1,6 +1,6 @@
 title: Ansible API
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-04-02 10:04:00
 ---
 

@@ -1,6 +1,6 @@
 title: Ansible 杂项
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-03-19 147:04:00
 ---
 ### 主机内置变量

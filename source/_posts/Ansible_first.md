@@ -1,6 +1,6 @@
 title: Ansible 初体验
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-03-14 09:04:00
 ---
 

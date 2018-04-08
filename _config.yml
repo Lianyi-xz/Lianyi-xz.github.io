@@ -62,28 +62,35 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  git: git
-  数据库: SQL
+  监控: monitor
+  性能分析: analysis
+  自动化: Devops
+  日志分析: log
+  容器: container
+  持续集成: CI
+  版本控制: git
+  DataBase: DataBase
   Linux: Linux
-  运维: Devops
   Python: Python
   杂项: other
 tag_map:
+  Zabbix: Zabbix
+  SmokePing: SmokePing
+  Ansible: Ansible
+  ELK: ELK
+  Docker: Docker
+  Swarm: Swarm
+  K8S: K8S
+  Jenkins: Jenkins
   github: github
-  Hexo: Hexo
+  MySQL: MySQL
   Shell: Shell
   OS: OS
   防火墙: firewall
   Django: Django
-  MySQL: MySQL
   爬虫: Crawler
-  ELK: Elk
-  Docker: Docker
-  Ansible: Ansible
-  Jenkins: Jenkins
   Python: Python
-
-
+  Hexo: Hexo
 # hexo-neat
 
 neat_enable: true

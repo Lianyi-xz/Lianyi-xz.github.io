@@ -1,6 +1,6 @@
 title: ELK 初探
 tags: ELK
-categories: 运维
+categories: 日志分析
 date: 2018-02-06 10:28:00
 ---
 ### ELK简介

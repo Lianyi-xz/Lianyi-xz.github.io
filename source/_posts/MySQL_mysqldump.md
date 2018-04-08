@@ -1,6 +1,6 @@
 title: MySQL 数据备份与还原(mysqldump)
 tags: MySQL
-categories: 数据库
+categories: DataBase
 date: 2018-03-12 14:28:00
 ---
 ### 创建备份用户

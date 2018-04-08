@@ -1,6 +1,6 @@
 title: ELK logstash 案例
 tags: ELK
-categories: 运维
+categories: 日志分析
 date: 2018-03-12 10:28:00
 ---
 

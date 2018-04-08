@@ -1,6 +1,6 @@
 title: ELK logstash配置语法
 tags: ELK
-categories: 运维
+categories: 日志分析
 date: 2018-03-12 09:28:00
 ---
 >logstash:收集并处理日志

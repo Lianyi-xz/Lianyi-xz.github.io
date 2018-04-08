@@ -1,6 +1,6 @@
 title: MySQL 数据备份与还原(select语句)
 tags: MySQL
-categories: 数据库
+categories: DataBase
 date: 2018-03-12 14:30:00
 ---
 >常用于单表备份

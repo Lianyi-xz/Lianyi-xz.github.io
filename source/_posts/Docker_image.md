@@ -1,6 +1,6 @@
 title: Docker Image (镜像)
 tags: Docker
-categories: 运维
+categories: 容器
 date: 2018-01-30
 ---
 

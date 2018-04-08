@@ -1,5 +1,5 @@
 title: Python调用微信公众号后台数据
-tags: [Shell,Python]
+tags: Python
 categories: Python
 date: 2018-02-11 17:28:00
 ---

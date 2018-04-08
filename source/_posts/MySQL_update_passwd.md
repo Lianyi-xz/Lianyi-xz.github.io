@@ -1,6 +1,6 @@
 title: MySQL 修改Root密码
 tags: MySQL
-categories: 数据库
+categories: DataBase
 date: 2018-03-13 14:30:00
 ---
 ### 已知ROOT密码

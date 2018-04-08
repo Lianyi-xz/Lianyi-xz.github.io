@@ -1,6 +1,6 @@
 title: Docker Swarm 实验
-tags: Docker
-categories: 运维
+tags: Swarm
+categories: 容器
 date: 2018-01-30
 ---
 

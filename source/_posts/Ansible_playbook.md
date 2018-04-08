@@ -1,6 +1,6 @@
 title: Ansible Playbook
 tags: Ansible
-categories: 运维
+categories: 自动化
 date: 2018-03-15 14:04:00
 ---
 ### Ansible剧本
