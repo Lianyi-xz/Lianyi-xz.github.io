@@ -1,7 +1,7 @@
 title: Ansible 杂项
 tags: Ansible
 categories: 自动化
-date: 2018-03-19 147:04:00
+date: 2018-03-19 17:04:00
 ---
 ### 主机内置变量
 ```bash
