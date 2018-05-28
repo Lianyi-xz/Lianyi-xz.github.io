@@ -4,6 +4,7 @@ categories: DataBase
 date: 2018-05-28 17:30:00
 ---
 ### 安装Mongo
+
 #### 导入包管理器公钥
 ```bash
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
@@ -20,9 +21,11 @@ sudo apt-get update
 ```bash
 sudo apt-get install -y mongodb-org
 ```
+
 <!-- more -->
+
 ### 关闭Huge Page
- Mongo 推荐关闭 Huge Page
+Mongo 推荐关闭 Huge Page
 1. 安装软件包
 ```bash
 sudo apt install sysfsutils
