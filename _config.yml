@@ -84,6 +84,7 @@ tag_map:
   Jenkins: Jenkins
   github: github
   MySQL: MySQL
+  Mongo: Mongo
   Shell: Shell
   OS: OS
   防火墙: firewall
