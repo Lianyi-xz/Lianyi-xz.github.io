@@ -92,6 +92,7 @@ tag_map:
   爬虫: Crawler
   Python: Python
   Hexo: Hexo
+  Nextcloud: Nextcloud
 # hexo-neat
 
 neat_enable: true

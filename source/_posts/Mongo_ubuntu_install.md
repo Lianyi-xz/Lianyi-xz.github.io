@@ -3,6 +3,8 @@ tags: Mongo
 categories: DataBase
 date: 2018-05-28 17:30:00
 ---
+> 官方APT源版本比较旧，建议安装新版本
+
 ### 安装Mongo
 
 #### 导入包管理器公钥
