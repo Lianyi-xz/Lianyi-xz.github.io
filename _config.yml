@@ -93,6 +93,7 @@ tag_map:
   Python: Python
   Hexo: Hexo
   Nextcloud: Nextcloud
+  VPN: Vpn
 # hexo-neat
 
 neat_enable: true

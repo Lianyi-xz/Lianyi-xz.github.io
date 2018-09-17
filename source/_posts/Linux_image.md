@@ -21,4 +21,4 @@ asciiview psb.jpg -driver curses
 ```
 
 ### 效果展示
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1flbrpat9goj30sq0ezqbq.jpg)
+![](../images/Linux_image_01.jpg)
