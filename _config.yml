@@ -94,6 +94,8 @@ tag_map:
   Hexo: Hexo
   Nextcloud: Nextcloud
   VPN: Vpn
+  Redis: Redis
+  Nginx: Nginx
 # hexo-neat
 
 neat_enable: true
