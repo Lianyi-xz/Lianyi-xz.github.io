@@ -27,7 +27,7 @@ gitlab-runner register
   # 选择注册方式 eg:shell
 #注销gitlab-runner
 gitlab-runner list
- gitlab-runner unregister -url http://gitlab.ichangtou.com.cn/ --token 2418b9431538bca7db6e451a79df69
+ gitlab-runner unregister -url http://gitlab.example.com.cn/ --token 2418b9431538bca7db6e451a79df69
 ```
 
 #### 常用配置参数
@@ -46,15 +46,15 @@ gitlab-runner list
 #### 管道API
 ```bash
 #获取所有管道
-curl --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.ichangtou.com.cn/api/v4/projects/91/pipelines" 
-curl --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.ichangtou.com.cn/api/v4/projects/91/pipelines?status=success" |python -m json.tool
+curl --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipelines" 
+curl --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipelines?status=success" |python -m json.tool
 
 #获取一个管道
 #创建一个新管道
-curl --request POST --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.ichangtou.com.cn/api/v4/projects/91/pipeline?ref=master" |python -m json.tool
+curl --request POST --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipeline?ref=master" |python -m json.tool
 
 #管道运行
-curl --request POST --header "PRIVATE-TOKEN:  H6VbQp8cJryYXVmTzj-3" "http://gitlab.ichangtou.com.cn/api/v4/projects/91/pipelines/91/retry"
+curl --request POST --header "PRIVATE-TOKEN:  H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipelines/91/retry"
 ```
 #### 我的脚本
 ```bash
@@ -104,7 +104,7 @@ FROM java:8-jdk-alpine
 ENV PARAMS=""
 ENV TZ=PRC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ADD target/ict-manage.jar app.jar
+ADD target/manage.jar app.jar
 ENTRYPOINT ["sh","-c","java $PARAMS -jar /app.jar"]
 
 

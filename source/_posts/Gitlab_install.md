@@ -32,7 +32,7 @@ rpm -ivh gitlab-ce-10.5.8-ce.0.el7.x86_64.rpm
 ```bash
 vim nginx.conf
   include /home/wwwroot/server/nginx/conf/hosts/*.conf;
-vim conf/gitlab.ichangtou.com.conf
+vim conf/gitlab.example.com.conf
 
 upstream gitlab {
   server unix://var/opt/gitlab/gitlab-rails/sockets/gitlab.socket;
@@ -41,7 +41,7 @@ upstream gitlab {
 server {
   listen *:80;
  #改为实际使用域名
-  server_name gitlab.ichangtou.com;   
+  server_name gitlab.example.com;   
 
   server_tokens off; 
   root /opt/gitlab/embedded/service/gitlab-rails/public;
@@ -94,7 +94,7 @@ server {
 #### gitlab.rb
 ```bash
 #域名设置
-external_url 'http://gitlab.ichangtou.com'
+external_url 'http://gitlab.example.com'
 #email设置
 gitlab_rails['gitlab_email_enabled'] = true
 gitlab_rails['gitlab_email_from'] = 'dev@xxx.com'

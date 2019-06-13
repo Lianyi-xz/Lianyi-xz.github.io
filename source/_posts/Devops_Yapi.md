@@ -24,23 +24,23 @@ node -v
 ### 安装mongodb4.05
 ```bash
 #安装最新版mongodb
-#下载速度慢，可直接拷贝当前yapi的/home/wwwroot/ichangtou/server/mongodb文件夹
+#下载速度慢，可直接拷贝当前yapi的/home/wwwroot/xxx/server/mongodb文件夹
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.0.5.tgz
 #解压mongodb
 tar xvf mongodb-linux-x86_64-rhel70-4.0.5.tgz
-mv mongodb-linux-x86_64-rhel70-4.0.5 /home/wwwroot/ichangtou/server/mongodb
+mv mongodb-linux-x86_64-rhel70-4.0.5 /home/wwwroot/xxx/server/mongodb
 #创建mongodb 日志和数据文件夹
-mkdir -p /home/wwwroot/ichangtou/logs/mongo
-home/wwwroot/ichangtou/database/mongodb
+mkdir -p /home/wwwroot/xxx/logs/mongo
+home/wwwroot/xxx/database/mongodb
 
 #编写mongodb配置文件
-vim /home/wwwroot/ichangtou/server/mongodb/bin/mongod.conf
+vim /home/wwwroot/xxx/server/mongodb/bin/mongod.conf
 port=27017
 bind_ip=127.0.0.1
-logpath=/home/wwwroot/ichangtou/logs/mongo/mongod.log  
+logpath=/home/wwwroot/xxx/logs/mongo/mongod.log  
 logappend=true  
 fork=true  
-dbpath=/home/wwwroot/ichangtou/database/mongodb
+dbpath=/home/wwwroot/xxx/database/mongodb
 
 #运行mongodb
 ./mongod -f mongod.conf
@@ -63,10 +63,10 @@ npm install -g pm2 --registry=https://registry.npm.taobao.org
 ```
 #### 安装并启动yapi
 ```bash
-#直接复制源服务器/home/wwwroot/ichangtou/server/yapi文件夹
-mv yapi /home/wwwroot/ichangtou/server/yapi
+#直接复制源服务器/home/wwwroot/xxx/server/yapi文件夹
+mv yapi /home/wwwroot/xxx/server/yapi
 #启动yapi
-/home/wwwroot/ichangtou/server/yapi/vendors/server
+/home/wwwroot/xxx/server/yapi/vendors/server
 pm2 start app.js  
 ```
 #### 配置nignx
