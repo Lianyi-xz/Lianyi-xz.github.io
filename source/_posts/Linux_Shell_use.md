@@ -1,7 +1,7 @@
 title: Shell 小技巧
 tags: Shell
 categories: Linux
-date: 2019-06-13 18:10:00
+date: 2019-07-05 18:10:00
 ---
 > 我使用过的 Shell 小套路
 
@@ -43,4 +43,17 @@ ${file##*/}
 if [[ $(echo $tag | grep "release") == "" ]];then exit 0;fi
 #从第0个位置数7个字符
 if [[ ${tag:0:7} -ne 'release' ]];then exit 0;fi
+```
+#### 查询调用指定ip的服务
+```bash
+for i in `netstat -anp | grep  ip |awk -F ' ' '{print $7}' | sort -rn | uniq |awk -F/ '{print $1}'`
+do
+	pwdi=`pwdx $i |awk '{print $2}' `
+	cd $pwdi/bin 
+	echo `pwd`
+	#查看是否为tomcat
+	ls |grep run.sh
+	#查看是否为其他项目
+	ls |grep catalina.sh
+done
 ```
