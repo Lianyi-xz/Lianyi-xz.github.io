@@ -28,10 +28,10 @@ remotessh
 
   hexo generate
 
-  git stash
-
   rm -rf node_modules
 
+  git stash
+  
   chmod -R +r public
 
   rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
@@ -39,8 +39,10 @@ remotessh
   ssh -t travis@47.96.70.2 -o StrictHostKeyChecking=no <<remotessh
   cd /data/wwwroot/
 
-  chown -R www:www www.sosad.cn
+  sudo chown -R www:www www.sosad.cn
 
   exit;
 remotessh
+
+
 fi
