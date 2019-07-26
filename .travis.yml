@@ -12,8 +12,20 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_09e65336fb9c_key -iv $encrypted_09e65336fb9c_iv
   -in ./.travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
+addons:
+  ssh_known_hosts: 47.96.70.2
+notifications:
+  email:
+    recipients:
+    - saboran@163.com
+    on_success: always
+    on_failure: always
 deploy:
 - provider: script
-  script: bash .travis/deploy.sh prod
+  # script: bash .travis/deploy.sh prod
+  script: 
+  - ls
+  - pwd
+  - hostname
   on:
     branch: master

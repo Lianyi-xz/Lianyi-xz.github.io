@@ -19,7 +19,7 @@ then
     mkdir www.sosad.cn
   fi
 
-  chown -R travis:travis www.sosad.cn
+  sudo chown -R travis:travis www.sosad.cn
 
   exit;
 remotessh
@@ -31,7 +31,7 @@ remotessh
   rm -rf node_modules
 
   git stash
-  
+
   chmod -R +r public
 
   rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
