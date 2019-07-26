@@ -30,6 +30,10 @@ remotessh
 
   rm -rf node_modules
 
+  git status
+
+  git diff
+  
   git stash
 
   chmod -R +r public

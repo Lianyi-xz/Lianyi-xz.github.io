@@ -22,10 +22,6 @@ notifications:
     on_failure: always
 deploy:
 - provider: script
-  # script: bash .travis/deploy.sh prod
-  script: 
-  - ls
-  - pwd
-  - hostname
+  script: bash .travis/deploy.sh prod
   on:
     branch: master
