@@ -6,7 +6,6 @@ branchs:
   - master
 script:
 - npm i -g hexo-cli
-- npm i
 before_install:
 - git config user.name "linganmin"
 - git config user.email "saboran@163.com"
@@ -15,14 +14,6 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 deploy:
 - provider: script
-  script: 
-  - bash .travis/deploy.sh prod
-  
-  - hexo generate
-  - git commit -am "build success"
-  - ls
-  - pwd
-  - rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
-
+  script: bash .travis/deploy.sh prod
   on:
     branch: master

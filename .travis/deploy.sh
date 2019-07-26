@@ -23,4 +23,9 @@ then
   exit;
 remotessh
 
+  npm i
+  git commit -am "build success"
+  hexo generate
+  ls
+  rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
 fi
