@@ -12,13 +12,15 @@ then
 elif [ $deploy_env == "prod" ]
 then
   
-  ssh travis@47.96.70.2 -o StrictHostKeyChecking=no <<remotessh
+  ssh -t root@47.96.70.2 -o StrictHostKeyChecking=no <<remotessh
+  cd /data/wwwroot/
+  ls 
+  if [ ! -d "/data/wwwroot/www.sosad.cn" ]; then
+    mkdir www.sosad.cn
+    chown -R www:www ./www.sosad.cn
+  fi
+  exit;
 
-  cd /data/wwwroot/www.sosad.cn
-  git pull
-  cnpm i
-  hexo generate
-  exit
+  rsync -v
 remotessh
-
 fi
