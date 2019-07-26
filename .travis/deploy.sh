@@ -20,7 +20,8 @@ then
     chown -R www:www ./www.sosad.cn
   fi
   exit;
-
-  rsync -v
 remotessh
+
+  rsync -az -vv --delete -e  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
+
 fi
