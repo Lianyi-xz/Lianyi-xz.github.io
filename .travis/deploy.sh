@@ -17,15 +17,20 @@ then
 
   if [ ! -d "/data/wwwroot/www.sosad.cn" ]; then
     mkdir www.sosad.cn
-    chown -R www:www ./www.sosad.cn
   fi
+
+  chown -R travis:travis www.sosad.cn
 
   exit;
 remotessh
 
   npm i
-  git commit -am "build success"
+  
+  git commit -am "npm i success"
+
   hexo generate
-  ls
+
+  rm -rf node_modules
+
   rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
 fi
