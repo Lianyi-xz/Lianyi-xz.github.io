@@ -3,7 +3,7 @@ node_js:
 - '10'
 branchs:
   only:
-  - master
+  - hexo
 script:
 - npm i -g hexo-cli
 before_install:
@@ -24,4 +24,4 @@ deploy:
 - provider: script
   script: bash .travis/deploy.sh prod
   on:
-    branch: master
+    branch: hexo
