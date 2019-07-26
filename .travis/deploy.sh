@@ -16,7 +16,7 @@ then
   cd /data/wwwroot/
 
   if [ ! -d "/data/wwwroot/www.sosad.cn" ]; then
-    mkdir www.sosad.cn
+   sudo mkdir www.sosad.cn
   fi
 
   sudo chown -R travis:travis www.sosad.cn
