@@ -12,7 +12,7 @@ then
 elif [ $deploy_env == "prod" ]
 then
   
-  ssh -t root@47.96.70.2 -o StrictHostKeyChecking=no <<remotessh
+  ssh -t travis@47.96.70.2 -o StrictHostKeyChecking=no <<remotessh
   cd /data/wwwroot/
   ls 
   if [ ! -d "/data/wwwroot/www.sosad.cn" ]; then
