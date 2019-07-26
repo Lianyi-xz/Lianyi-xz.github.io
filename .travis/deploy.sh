@@ -30,12 +30,6 @@ remotessh
 
   rm -rf node_modules
 
-  git status
-
-  git diff
-  
-  git stash
-
   chmod -R +r public
 
   rsync -azr -vv --delete  public/ travis@47.96.70.2:/data/wwwroot/www.sosad.cn/
