@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '10'
+branchs:
+  only:
+  - hexo
+script:
+- npm i -g hexo-cli
+before_install:
+- openssl aes-256-cbc -K $encrypted_ac8cffb1be0c_key -iv $encrypted_ac8cffb1be0c_iv
+  -in ./.travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- git config user.name "linganmin"
+- git config user.email "saboran@163.com"
+- chmod 600 ~/.ssh/id_rsa
+addons:
+  ssh_known_hosts: 47.96.70.2
+notifications:
+  email:
+    recipients:
+    - saboran@163.com
+    on_success: always
+    on_failure: always
+deploy:
+- provider: script
+  script: bash .travis/deploy.sh prod
+  on:
+    branch: hexo
