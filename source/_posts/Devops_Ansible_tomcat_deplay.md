@@ -92,11 +92,6 @@ tocmat_app_index: index.jsp
   notify: restart tomcat
 ```
 ### ansible测试
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fpsavlllzvj30b1045747.jpg)  
-
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fpsaykxo8wj30qf09pdhh.jpg)  
-
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fpsaz38u0uj30b503n747.jpg)  
 
 ### 参考资料
 [我的脚本-tomcat部署](https://github.com/Lianyi-xz/ansible-examples/tree/master/tomcat-install)  

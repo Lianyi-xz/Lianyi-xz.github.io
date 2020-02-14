@@ -46,6 +46,7 @@ cd extundelete-0.2.4
  export PATH=/usr/local/extundelete/bin:$PATH 
  source /etc/profile
 ```
+
 ### 安装 psmisc
 ```bash
 #安装
@@ -53,6 +54,7 @@ yum install psmisc
 #强制卸载被占用的分区
 fuser -k 挂载点
 ```
+
 ### extundelete用法详解
 ```bash
 #命令格式：
@@ -103,10 +105,12 @@ extundelete /dev/sda4 --restore-directory a
 #恢复所有文件
 extundelete /dev/sda4 --restore-all
 ```
+
 ### 恢复根下文件
 * 立即断电，然后把磁盘以只读方式，挂载到另一个电脑中进行恢复
 * 把extundelete在虚拟机上（虚拟机系统要和服务器版本一样），提前安装好后再复制到U盘中，\
-    把U盘插入服务器，恢复时，恢复的文件要保存到U盘中，（不要让恢复的数据写到/下，那样会覆盖之前删除的文件）
+    把U盘插入服务器，恢复时，恢复的文件要保存到U盘中，（不要让恢复的数据写到/下，那样会覆盖之前删除的文件） 
+    
 ### 参考资料
 [鸟哥的linux私房菜](http://linux.vbird.org/linux_basic/0230filesystem.php#harddisk-inode)  
 [Linux下高效数据恢复软件extundelete应用实战](http://blog.51cto.com/ixdba/1566856)  
