@@ -57,3 +57,17 @@ do
 	ls |grep catalina.sh
 done
 ```
+
+#### scp
+```bash
+#scp 不填写密码
+sshpass -p password scp root@ip:/os/path/* /os/path
+```
+
+#### 网络命令
+```bash
+#抓包
+tcpdump -i eth0 port 53 -s0 -vvv
+#发送一个数据包
+nc -vtzw 5 ip port
+```
