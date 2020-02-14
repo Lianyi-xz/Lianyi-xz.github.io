@@ -21,6 +21,7 @@ source /etc/profile
 node -v
 ```
 <!-- more -->
+
 ### 安装mongodb4.05
 ```bash
 #安装最新版mongodb
@@ -56,12 +57,14 @@ mongodump -d yapi -o /home/yapi_data
 #新服务器中导入源yapi平台数据
 mongorestore -d yapi --drop /home/yapi_data
 ```
-#### 安装git和pm2
+
+### 安装git和pm2
 ```bash
 yum install -y git
 npm install -g pm2 --registry=https://registry.npm.taobao.org
 ```
-#### 安装并启动yapi
+
+### 安装并启动yapi
 ```bash
 #直接复制源服务器/home/wwwroot/xxx/server/yapi文件夹
 mv yapi /home/wwwroot/xxx/server/yapi
@@ -69,7 +72,8 @@ mv yapi /home/wwwroot/xxx/server/yapi
 /home/wwwroot/xxx/server/yapi/vendors/server
 pm2 start app.js  
 ```
-#### 配置nignx
+
+### 配置nignx
 ```bash
     upstream yapi{
       server 127.0.0.1:3000;

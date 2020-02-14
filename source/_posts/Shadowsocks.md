@@ -50,5 +50,6 @@ ssserver -c /etc/shadowsocks.json -d start
 ### 使用方式
 * 下载ShadowsocksR客户端
 * 填写服务器ip、密码、端口
+
 ### 参考资料
 [GitHub](https://github.com/shadowsocks/shadowsocks/tree/master)  

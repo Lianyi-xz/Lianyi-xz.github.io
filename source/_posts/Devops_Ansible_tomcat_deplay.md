@@ -101,3 +101,5 @@ tocmat_app_index: index.jsp
 ### 参考资料
 [我的脚本-tomcat部署](https://github.com/Lianyi-xz/ansible-examples/tree/master/tomcat-install)  
 [我的脚本-项目发布](https://github.com/Lianyi-xz/ansible-examples/tree/master/tomcat-deplay)
+[我的zabbix部署脚本](https://github.com/Lianyi-xz/ansible-examples/tree/master/zabbix)  
+[ansible-examples](https://github.com/ansible/ansible-examples)  

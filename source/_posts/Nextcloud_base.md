@@ -137,9 +137,9 @@ systemctl enable nginx
 ```
 ### 登录 Nextcloud 
 登陆页面
-![登陆页面](http://wx3.sinaimg.cn/mw690/0060lm7Tly1ftdtl03358j316y0rodxz.jpg)  
+![登陆页面](../images/Nextcloud_base_01.jpg)  
 主页面
-![主页面](http://wx3.sinaimg.cn/mw690/0060lm7Tly1ftdtmruz34j31110ghgml.jpg)
+![主页面](../images/Nextcloud_base_02.jpg)
 ### 遇到问题
 #### 登录失败
 ```bash

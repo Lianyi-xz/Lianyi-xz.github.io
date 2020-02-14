@@ -3,7 +3,7 @@ tags: git
 categories: 版本控制
 date: 2019-01-30  17:21:00
 ---
-###### 安装和部署gitlab runner
+### 安装和部署gitlab runner
 ```bash
 # 安装gitlab
 # 安装gitlb-ci
@@ -14,7 +14,8 @@ date: 2019-01-30  17:21:00
  sudo gitlab-runner start
 ```
 <!-- more -->
-#### 注册gitlab runner
+
+### 注册gitlab runner
 ```bash
 #注册gitlab ci
 gitlab-runner register
@@ -30,7 +31,7 @@ gitlab-runner list
  gitlab-runner unregister -url http://gitlab.example.com.cn/ --token 2418b9431538bca7db6e451a79df69
 ```
 
-#### 常用配置参数
+### 常用配置参数
 * script:  Runner执行的shell脚本
 * image：使用docker镜像:image:name
 * services：使用 docker services 镜像：services:name
@@ -43,7 +44,7 @@ gitlab-runner list
 * when：工作时间 when:manual  when:delayed
 * allow_failure：允许失败
 
-#### 管道API
+### 管道API
 ```bash
 #获取所有管道
 curl --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipelines" 
@@ -56,7 +57,7 @@ curl --request POST --header "PRIVATE-TOKEN: H6VbQp8cJryYXVmTzj-3" "http://gitla
 #管道运行
 curl --request POST --header "PRIVATE-TOKEN:  H6VbQp8cJryYXVmTzj-3" "http://gitlab.example.com.cn/api/v4/projects/91/pipelines/91/retry"
 ```
-#### 我的脚本
+### 我的脚本
 ```bash
 #上传docker镜像
 vim .gitlab-ci.ymlvariables:
@@ -109,5 +110,5 @@ ENTRYPOINT ["sh","-c","java $PARAMS -jar /app.jar"]
 
 
 ```
-#### 参考文档
+### 参考文档
 [gitlab document ](https://docs.gitlab.com/ee/ci/quick_start/)

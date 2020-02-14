@@ -70,4 +70,6 @@ sshpass -p password scp root@ip:/os/path/* /os/path
 tcpdump -i eth0 port 53 -s0 -vvv
 #发送一个数据包
 nc -vtzw 5 ip port
+#临时监听TCP端口
+nc -l port
 ```
