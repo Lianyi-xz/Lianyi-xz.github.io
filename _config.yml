@@ -135,3 +135,9 @@ pagination_dir: page
 #theme: landscape
 theme: next
 
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: git@github.com:Lianyi-xz/Lianyi-xz.github.io.git
+  branch: master
