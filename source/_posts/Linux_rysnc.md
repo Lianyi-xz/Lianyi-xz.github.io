@@ -21,7 +21,25 @@ date: 2020-02-16 23:10:00
 
 ### 架构图
 ![](../images/Linux_rsync_01.jpg)
-### Centos6 启动Rsync server
+### Rsync 进行定时备份
+#### rsync server 部署
+```bash
+#查看软件包
+rpm -qc rsync 
+#安装与卸载 系统默认自带rsync
+yum install -y rsync
+yum  remove rsync
+#新建rsync用户
+useradd -M -s /sbin/nologin rsync
+#开启自启动
+chkconfig --list |grep rsync
+chkconfig rsync on
+#设置 认证账号密码
+echo "rysnc_backup:Passwd" >/etc/rsync.passwd
+chmod 600 /etc/rsync.passwd
+#修改备份目录权限
+chown -R rsync.rsync /nas/project_name_videofile
+```
 #### 编辑 Rsync 配置文件
 ```bash
 #全局模块
@@ -54,11 +72,30 @@ log file = /var/log/rsyncd.log
 [videofile]
 #模块注释信息
 comment = 192.168.147.214:/videofile
-path = /nas/videofile
+path = /nas/project_name_videofile
 hosts allow = 192.168.147.214 192.168.147.215
+```
+#### rsync 启动
+```bash
+#查看 守护信息
+cat /etc/xinetd.d/rsync
+#启动服务
+/etc/init.d/xinetd start|stop|restart
+```
 
-[data]
-comment = 192.168.147.214:/videodata
-path = /nas/videodata
-hosts allow = 192.168.147.214 192.168.147.215
+#### 业务服务器添加定时增量备份脚本
+```bash
+crontab -e
+30 22 * * * bash /script/rsync-videofile.sh
+
+vim  /script/rsync-videofile.sh
+#!/bin/bash
+HOST=$(hostname)
+ADDR=$(hostname -I)
+DATE=$(date)
+DEST=${HOST}" | "${ADDR}" | "${DATE}
+export RSYNC_PASSWORD="Passwd"
+echo $DEST >> /videofile/rsync_videofile.log
+rsync -vzurtopg --progress  /videofile/  rsync_backup@192.168.70.227::project_name_videofile 
+echo $(date)" end" >> /videofile/rsync_videofile.log
 ```
