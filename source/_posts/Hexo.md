@@ -1,6 +1,6 @@
 title: First Blog
-tags: Hexo
-categories: other
+tags: 服务
+categories: 运维
 date: 2018-01-08
 ---
 ### 前提条件

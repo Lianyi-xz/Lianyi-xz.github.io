@@ -1,6 +1,6 @@
 title:  df -h 不可中断解决
-tags: OS
-categories: Linux
+tags: 系统
+categories: 运维
 date: 2019-02-10
 ---
 

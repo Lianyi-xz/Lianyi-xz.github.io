@@ -1,6 +1,6 @@
 title: SmokePing 部署实践
-tags: SmokePing
-categories: 监控
+tags: 监控
+categories: 运维
 date: 2018-04-08 10:49:00
 ---
 ### SmokePing简介

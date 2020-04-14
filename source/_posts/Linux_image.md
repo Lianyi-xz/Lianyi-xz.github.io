@@ -1,6 +1,6 @@
 title: Linux 中ASCII显示图片
-tags: OS
-categories: Linux
+tags: 系统
+categories: 运维
 date: 2018-01-10
 ---
 > 在ubuntu中实现，且并没有什么实用价值的小技能

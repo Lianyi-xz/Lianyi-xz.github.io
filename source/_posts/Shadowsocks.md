@@ -1,6 +1,6 @@
 title: Shadowsocks代理服务器
-tags: VPN
-categories: Linux
+tags: 服务
+categories: 运维
 date: 2018-09-17 11:28:00
 ---
 ### 简介

@@ -1,6 +1,6 @@
 title: Github 常用命令
-tags: github
-categories: 版本控制
+tags: git
+categories: 运维
 date: 2018-02-05
 ---
 > 依据他人文档整理

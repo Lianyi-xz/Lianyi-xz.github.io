@@ -1,6 +1,6 @@
 title: Rsync文件同步
-tags: OS
-categories: Linux
+tags: Shell
+categories: 运维
 date: 2020-02-16 23:10:00
 ---
 >出于容灾的考虑，每日晚对视频文件进行备份。

@@ -1,6 +1,6 @@
 title: Shell 小技巧
 tags: Shell
-categories: Linux
+categories: 运维
 date: 2019-07-05 18:10:00
 ---
 > 我使用过的 Shell 小套路
