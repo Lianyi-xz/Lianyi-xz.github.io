@@ -3,7 +3,7 @@ tags: Shell
 categories: 运维
 date: 2019-07-05 18:10:00
 ---
-> 我使用过的 Shell 小套路
+> 我使用过的 Shell 小技巧，不定期更新
 
 #### 按行读取文件内容
 ```bash
@@ -72,4 +72,13 @@ tcpdump -i eth0 port 53 -s0 -vvv
 nc -vtzw 5 ip port
 #临时监听TCP端口
 nc -l port
+```
+
+#### 文件中插入字符块
+```bash
+cat <<'EOF'>>  /usr/local/nginx/conf/conf.d/nginx_upstream.conf
+# 使用 该方式不会丢掉变量
+EOF
+
+cat /usr/local/nginx/conf/conf.d/nginx_upstream.conf
 ```
