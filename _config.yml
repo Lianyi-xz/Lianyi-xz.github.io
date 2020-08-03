@@ -5,7 +5,7 @@
 # Site
 title: 拙
 subtitle: 昭然的个人博客
-description: Linux | MySQL | Docker | Python | Git
+description: 一个靠气势吃饭的手艺人
 author: 昭然
 language: zh-Hans
 timezone:
@@ -121,3 +121,26 @@ deploy:
   type: git
   repository: git@github.com:Lianyi-xz/Lianyi-xz.github.io.git
   branch: master
+
+
+# Markdown-it config
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
