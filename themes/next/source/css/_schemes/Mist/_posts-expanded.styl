@@ -5,8 +5,7 @@
 
   .post-title,
   .post-meta {
-    text-align: $site-meta-text-align;
-    +mobile() { text-align: center; }
+    text-align: center;
   }
   .post-eof { display: none; }
 
@@ -22,6 +21,7 @@
     position: relative;
     font-size: $font-size-headings-base;
     font-weight: 400;
+    text-align: center;
     +mobile() { font-size: $font-size-headings-smaller; }
     +desktop-large() { font-size: $font-size-headings-large; }
   }
@@ -43,7 +43,7 @@
 
 .post-button {
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
 
   a {
     margin: 0 8px 8px 0 !important;
