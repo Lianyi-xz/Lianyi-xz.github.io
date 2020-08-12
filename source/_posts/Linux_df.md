@@ -1,6 +1,7 @@
+---
 title:  df -h 不可中断解决
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2019-02-10
 ---
 

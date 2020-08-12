@@ -1,6 +1,7 @@
+---
 title: Linux 挂载异常处理
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2020-05-10 11:39:00
 ---
 

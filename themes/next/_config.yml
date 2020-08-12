@@ -57,9 +57,11 @@ menu:
   home: /
   #tags: /tags/
   #categories: /categories/
-  archives: /archives/
-  about: /about/
+  #archives: /archives/
+  devops: /categories/devops
+  life: /categories/life
   #sitemap: /sitemap.xml
+  about: /about/
   #commonweal: /404/
   #baidusitemap: /baidusitemap.xml
 
@@ -79,6 +81,8 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
+  devops: wrench
+  life: paper-plane-o
 
 
 # ---------------------------------------------------------------
@@ -467,7 +471,7 @@ busuanzi_count:
 
 
 # Tencent analytics ID
-#tencent_analytics: 65316766
+tencent_analytics: 65316766
 
 # Tencent MTA ID
 # tencent_mta:

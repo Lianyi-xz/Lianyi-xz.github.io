@@ -1,6 +1,7 @@
+---
 title: Ansible 进行项目自动部署（tomcat）
-tags: 自动化
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2018-03-28 09:04:00
 ---
 > 通过Ansible来安装tomcat并部署新程序
@@ -9,6 +10,8 @@ date: 2018-03-28 09:04:00
 * 10.10.0.1:ansible master
 * 10.10.0.2:ansible agent
 * 10.10.0.3:ansible agent
+
+
 
 ### 安装环境
 * centos7

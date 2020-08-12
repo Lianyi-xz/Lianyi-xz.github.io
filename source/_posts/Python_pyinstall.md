@@ -1,6 +1,7 @@
+---
 title: 打包Python脚本
-tags: Python
-categories: 开发
+tags: 代码
+categories: 技术
 date: 2018-12-10 10:22:00
 ---
 > 将Python脚本打包成可执行文件

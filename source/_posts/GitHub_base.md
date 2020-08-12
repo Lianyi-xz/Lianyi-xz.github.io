@@ -1,6 +1,7 @@
+---
 title: Github 常用命令
-tags: git
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2018-02-05
 ---
 > 依据他人文档整理

@@ -1,6 +1,7 @@
+---
 title: Linux 终端提示符
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2018-01-10
 ---
 #### 设置终端提示符步骤

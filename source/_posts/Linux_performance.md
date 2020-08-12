@@ -1,6 +1,7 @@
+---
 title: Linux 性能分析
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2018-04-13 10:38:00
 ---
 ### 系统分析

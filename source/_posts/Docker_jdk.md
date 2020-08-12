@@ -1,6 +1,7 @@
+---
 title: Dockerfile JDK1.8
-tags: 容器
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2019-06-10 11:32:00
 ---
 

@@ -1,8 +1,7 @@
+---
 title: Gitlab 500 异常
-tags: 
-    - 自动化
-    - git
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2020-05-12  17:21:00
 ---
 

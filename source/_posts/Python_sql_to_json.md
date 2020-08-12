@@ -1,6 +1,7 @@
+---
 title: Python实现SQL数据转化为json格式
-tags: Python
-categories: 开发
+tags: 代码
+categories: 技术
 date: 2018-02-11 15:28:00
 ---
 > 基于Python 2.7.5 实现

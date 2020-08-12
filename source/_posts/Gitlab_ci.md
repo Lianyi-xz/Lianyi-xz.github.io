@@ -1,8 +1,7 @@
+---
 title: Gitlab CI
-tags: 
-    - 自动化
-    - git
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2019-01-30  17:21:00
 ---
 ### 安装和部署gitlab runner

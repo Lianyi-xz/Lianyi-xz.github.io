@@ -1,6 +1,7 @@
+---
 title: Yapi部署并迁移文档
 tags: 服务
-categories: 运维
+categories: 技术
 date: 2019-03-01 09:04:00
 ---
 

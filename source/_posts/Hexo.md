@@ -1,13 +1,14 @@
+---
 title: First Blog
 tags: 服务
-categories: 运维
+categories: 技术
 date: 2018-01-08
 ---
-### 前提条件
+#### 前提条件
 * 安装 [git](https://git-scm.com/downloads)
 * 安装 [node.js](https://nodejs.org/en/)
 
-### win10安装Hexo
+#### win10安装Hexo
 ```shell
 #git bash
 npm install hexo-cli -g
@@ -16,14 +17,14 @@ npm install hexo-generator-baidu-sitemap --save
 hexo -v
 ```
 <!-- more -->
-### Hexo设置
+#### Hexo设置
 ```shell
 #hexo初始化
 hexo init Blog
 git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
 ```
 
-### git设置
+#### git设置
 ``` bash
 deploy:
   type: git
@@ -32,7 +33,7 @@ deploy:
     coding: git@git.coding.net:lianyizhiwai/lianyizhiwai.coding.me.git
   branch: master
 ```
-### 常用命令
+#### 常用命令
 ```bash
 #本地运行博客
 hexo server
@@ -45,10 +46,38 @@ git add .
 git commit -m "source update"
 git push
 ```
-### 跨主机写作
+#### 跨主机写作
 1. 创建hexo分支
 1. 将hexo设置为默认分支
 1. 部署hexo
+
+#### 添加自定义 menu
+> 将分类添加到导航栏中 
+
+##### 新添加菜单对应翻译  
+打开`hexo>theme>next>languages>zh-Hans.yml`,在menu下添加:  
+```bash
+menu:
+  ...
+  devops: 技术
+``` 
+
+##### 在菜单中添加链接
+打开`hexo>theme>next>_config.yml`,在menu下添加:  
+```bash
+menu:
+  ...
+  devops: /categories/devops
+```
+
+##### 添加对应的菜单图标
+图标来自 [fontawesome](https://fontawesome.com/v4.7.0/icons/),打开`hexo>theme>next>_config.yml`,在menu_icons下添加:  
+```bash
+menu_icons:
+  enable: true
+  ...
+  devops: wrench
+```
 
 ### 参考资料
 [NexT主题文档](http://theme-next.iissnan.com/getting-started.html)  

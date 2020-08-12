@@ -1,6 +1,7 @@
+---
 title: Linux 图片压缩
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2018-07-19 11:39:00
 ---
 ### 安装ImageMagick

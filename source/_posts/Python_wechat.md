@@ -1,6 +1,7 @@
+---
 title: Python调用微信公众号后台数据
-tags: Python
-categories: 开发
+tags: 代码
+categories: 技术
 date: 2018-02-11 17:28:00
 ---
 ### 概述

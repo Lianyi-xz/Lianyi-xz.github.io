@@ -1,6 +1,7 @@
+---
 title: Redis 集群安装
-tags: 数据库
-categories: 运维
+tags: 服务
+categories: 技术
 date: 2019-02-11 17:28:00
 ---
 > redis 若使用root用户启动，可对服务器进行提权

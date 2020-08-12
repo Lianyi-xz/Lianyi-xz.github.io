@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 昭然的博客
+title: Zhaoran's Notes
 subtitle: This-a way
 description: 一个靠气势吃饭的手艺人
 author: 昭然
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
 
 #local search
 search:
@@ -21,7 +21,7 @@ search:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: sosad.cn
 root: /
-permalink: :title.html
+permalink: :category/:title.html
 permalink_defaults:
 
 # Directory
@@ -60,21 +60,15 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: normal
 category_map:
-  运维: dev
-  开发: ops
-  其他: other
+  技术: devops
+  日常: life
 tag_map:
   系统: OS
   服务: Server
-  监控: monitor
-  容器: container
-  自动化: Devops
-  数据库: DataBase
-  Python: Python
-  git: git
-  Shell: Shell
+  代码: Code
+  随笔: Essay
   其他: other
 # hexo-neat
 

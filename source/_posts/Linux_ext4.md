@@ -1,6 +1,7 @@
+---
 title: Centos6 文件(ext4)恢复
 tags: 系统
-categories: 运维
+categories: 技术
 date: 2018-03-08 19:04:00
 ---
 >ext4文件系统上恢复删除文件(extundelete)  

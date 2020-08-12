@@ -1,6 +1,7 @@
+---
 title: Shell 小技巧
-tags: Shell
-categories: 运维
+tags: 系统
+categories: 技术
 date: 2019-07-05 18:10:00
 ---
 > 我使用过的 Shell 小技巧，不定期更新
@@ -11,6 +12,13 @@ date: 2019-07-05 18:10:00
 	while read line; do
 		key=${line%=*}
 		value=${line#*=}
+	done < ./config.sh
+
+# while循环中调用ssh命令时，重定向给while命令的数据，会被ssh命令读走了，导致循环出问题
+	while read line; do
+		ip=${line%=*}
+		data=${line#*=}
+		ssh -q -n $ip "echo $data"
 	done < ./config.sh
 ```
 <!-- more -->
@@ -58,10 +66,17 @@ do
 done
 ```
 
-#### scp
+#### 通过中间主机建立ssh
+```bash
+ssh -t B ssh C
+```
+
+####  sshpass
 ```bash
 #scp 不填写密码
 sshpass -p password scp root@ip:/os/path/* /os/path
+#互信不输入密码
+sshpass -p password  ssh-copy-id root@ip
 ```
 
 #### 网络命令
