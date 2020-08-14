@@ -17,10 +17,7 @@
 </div>
 
 <div class="theme-info">
-  {{ __('footer.theme') }} -
-  <a class="theme-link" rel="external nofollow" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.{{ theme.scheme }}
-  </a>
+  本网站支持IPv6网络
 </div>
 {% endif %}
 
