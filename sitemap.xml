@@ -2,177 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>sosad.cn/fw.html</loc>
-    
-    <lastmod>2020-04-14T07:06:32.267Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Ansible_authorized.html</loc>
-    
-    <lastmod>2020-04-14T07:05:42.255Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Devops_Ansible_tomcat_deplay.html</loc>
-    
-    <lastmod>2020-04-14T07:05:39.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Docker_jdk.html</loc>
-    
-    <lastmod>2020-04-14T07:05:34.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Gitlab_ci.html</loc>
-    
-    <lastmod>2020-04-14T07:05:22.968Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/GitHub_base.html</loc>
-    
-    <lastmod>2020-04-14T07:05:18.280Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Hexo.html</loc>
-    
-    <lastmod>2020-04-14T07:03:38.072Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_df.html</loc>
-    
-    <lastmod>2020-04-14T07:03:28.987Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_ext4.html</loc>
-    
-    <lastmod>2020-04-14T07:03:23.795Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_PS1.html</loc>
-    
-    <lastmod>2020-04-14T07:03:13.368Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_performance.html</loc>
-    
-    <lastmod>2020-04-14T07:03:08.618Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_ImageMagick.html</loc>
-    
-    <lastmod>2020-04-14T07:03:04.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_image.html</loc>
-    
-    <lastmod>2020-04-14T07:03:00.441Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Nginx_Porxy.html</loc>
-    
-    <lastmod>2020-04-14T07:02:11.527Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Linux_rysnc.html</loc>
-    
-    <lastmod>2020-04-14T07:02:05.353Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>sosad.cn/Linux_Shell_use.html</loc>
     
-    <lastmod>2020-04-14T06:42:08.015Z</lastmod>
+    <lastmod>2021-01-07T01:42:18.745Z</lastmod>
     
   </url>
   
   <url>
-    <loc>sosad.cn/Python_aliyun_rds.html</loc>
+    <loc>sosad.cn/uoload_life.html</loc>
     
-    <lastmod>2020-04-14T06:41:58.796Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Python_pyinstall.html</loc>
-    
-    <lastmod>2020-04-14T06:41:56.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Python_sql_to_json.html</loc>
-    
-    <lastmod>2020-04-14T06:41:54.766Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Python_wechat.html</loc>
-    
-    <lastmod>2020-04-14T06:41:50.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Redis_install.html</loc>
-    
-    <lastmod>2020-04-14T06:41:46.899Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Shadowsocks.html</loc>
-    
-    <lastmod>2020-04-14T06:41:35.199Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/SmokePing.html</loc>
-    
-    <lastmod>2020-04-14T06:41:20.127Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>sosad.cn/Devops_Yapi.html</loc>
-    
-    <lastmod>2020-04-14T06:38:03.115Z</lastmod>
+    <lastmod>2020-08-12T06:37:59.826Z</lastmod>
     
   </url>
   
   <url>
     <loc>sosad.cn/about/index.html</loc>
     
-    <lastmod>2020-04-14T06:21:56.295Z</lastmod>
+    <lastmod>2020-08-12T05:33:25.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Hexo.html</loc>
+    
+    <lastmod>2020-08-12T04:54:44.514Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_PS1.html</loc>
+    
+    <lastmod>2020-08-12T04:29:04.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Docker_jdk.html</loc>
+    
+    <lastmod>2020-08-12T04:27:34.613Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/GitHub_base.html</loc>
+    
+    <lastmod>2020-08-12T04:27:20.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Gitlab_500.html</loc>
+    
+    <lastmod>2020-08-12T04:27:02.146Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Gitlab_ci.html</loc>
+    
+    <lastmod>2020-08-12T04:26:43.591Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_df.html</loc>
+    
+    <lastmod>2020-08-12T04:26:17.070Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_ext4.html</loc>
+    
+    <lastmod>2020-08-12T04:26:09.279Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_image.html</loc>
+    
+    <lastmod>2020-08-12T04:25:59.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_ImageMagick.html</loc>
+    
+    <lastmod>2020-08-12T04:25:38.950Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_mount.html</loc>
+    
+    <lastmod>2020-08-12T04:24:38.234Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_performance.html</loc>
+    
+    <lastmod>2020-08-12T04:23:58.953Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Linux_rysnc.html</loc>
+    
+    <lastmod>2020-08-12T04:23:40.438Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Nginx_Porxy.html</loc>
+    
+    <lastmod>2020-08-12T04:22:51.864Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Python_aliyun_rds.html</loc>
+    
+    <lastmod>2020-08-12T04:22:40.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Python_pyinstall.html</loc>
+    
+    <lastmod>2020-08-12T04:22:31.302Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Python_sql_to_json.html</loc>
+    
+    <lastmod>2020-08-12T04:22:20.473Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Python_wechat.html</loc>
+    
+    <lastmod>2020-08-12T04:22:07.024Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Redis_install.html</loc>
+    
+    <lastmod>2020-08-12T04:21:13.377Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Shadowsocks.html</loc>
+    
+    <lastmod>2020-08-12T04:21:00.370Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Devops_Yapi.html</loc>
+    
+    <lastmod>2020-08-12T04:20:50.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/SmokePing.html</loc>
+    
+    <lastmod>2020-08-12T04:20:17.706Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Devops_Ansible_tomcat_deplay.html</loc>
+    
+    <lastmod>2020-08-12T04:19:54.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn/Ansible_authorized.html</loc>
+    
+    <lastmod>2020-08-12T04:12:06.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>sosad.cn//404.html</loc>
+    
+    <lastmod>2020-08-04T08:54:42.922Z</lastmod>
     
   </url>
   
