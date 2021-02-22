@@ -97,3 +97,9 @@ EOF
 
 cat /usr/local/nginx/conf/conf.d/nginx_upstream.conf
 ```
+
+#### 压缩并加密文件
+```bash
+# 加密日志 不保留原gz文件
+find -L /usr/local/$appname/logs -type f  -name "*gz" |xargs -i zip -m -rP passwd  {}.zip  {}
+```

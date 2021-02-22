@@ -10,7 +10,7 @@
 
 {% if theme.copyright %}
 <div class="powered-by">
-  苏ICP备18010133号
+  <a class="theme-link" rel="external nofollow" target="_blank" href="https://beian.miit.gov.cn">苏ICP备18010133号-1</a>
 </div>
 <div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" rel="external nofollow" href="https://hexo.io">Hexo</a>') }}
