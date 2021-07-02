@@ -448,8 +448,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: NUCHMPhAam5nllQEGYpXfKpU-gzGzoHsz
-  app_key: SIAlu46RW9vR51j3PkQbvnMx
+  app_id: bU29NN68YtKkP9B6NiuH1tn5-gzGzoHsz
+  app_key: tkRvYeslDxhCwbTbbsLDvOx3
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/

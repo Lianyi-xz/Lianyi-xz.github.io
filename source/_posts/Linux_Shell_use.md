@@ -88,7 +88,14 @@ nc -vtzw 5 ip port
 #临时监听TCP端口
 nc -l port
 ```
-
+#### rontab 定时任务
+```bash
+cron_job1="*/5 * * * * /bin/bash /scripts/a.sh"
+#新增定时任务
+( crontab -u root -l | grep -v "$cron_job1"; echo "$cron_job1" ) | crontab -u root -
+#删除定时任务
+crontab -u root -l | grep -v 'a.sh'  | crontab -u root -
+```
 #### 文件中插入字符块
 ```bash
 cat <<'EOF'>>  /usr/local/nginx/conf/conf.d/nginx_upstream.conf
