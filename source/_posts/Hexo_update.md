@@ -6,7 +6,7 @@ date: 2021-10-29
 ---
 >  年更博主更新后发现网站白屏，所有html文件为空。排查后发现问题出在新版本npm和Hexo不匹配，经过简单调研后我做出了一个 ~~违背祖宗~~ 艰难的的决定：更新Hexo版本
 
-##### 更新Hexo
+#### 更新Hexo
 > 更新后发现 分页器出现问题，页面编译正常
 ```bash
 #查看需要更新版本
@@ -20,7 +20,7 @@ hexo g
 ```
 <!-- more -->
 
-###### 新package.json
+#### 新package.json
 ```bash
 {
   "name": "hexo-site",
@@ -55,6 +55,6 @@ hexo g
 
 #### 参考文档
 [VuePass](https://vuepress.vuejs.org/zh/guide/#features)  
-[hexo 升级到微信5.3.0](https://www.jianshu.com/p/8d2e2b206e4e)  
+[hexo 升级到5.3.0](https://www.jianshu.com/p/8d2e2b206e4e)  
 [npm更新模块并同步到package.json中](https://www.cnblogs.com/dxxzst/p/10006268.html)  
 [解决Hexo博客模板hexo-theme-next的翻页按钮不正常显示问题)](https://www.cnblogs.com/xiejava/p/12456273.html)
