@@ -150,9 +150,6 @@ host = 219.150.32.132
 /usr/local/smokeping/bin/smokeping
 ```
 
-### 结果
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fq5b7xu9ouj30q306hmxt.jpg)
-![](https://ws1.sinaimg.cn/large/006Xrlj6gy1fq5b88zu4ej30ri08pwf5.jpg)
 ### 参考资料
 [SmokePing 部署实践](http://jaminzhang.github.io/monitoring/smokeping-deploy-practice/#top15)  
 [smokeping_install](https://oss.oetiker.ch/smokeping/doc/smokeping_install.en.html)  

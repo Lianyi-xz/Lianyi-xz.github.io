@@ -16,8 +16,8 @@ date: 2020-05-12  17:21:00
 /opt/gitlab/bin/gitlab-rake gitlab:backup:create
 ```
 <!-- more -->
-### 故障定位
 
+### 故障定位
 #### 查询首页相关日志
 
 &emsp;&emsp;通过gitlab日志，查看首页报错信息

@@ -1,10 +1,10 @@
 ---
-title: Golang 调用vSphere Api
+title: Govmomi获取虚拟机列表
 tags: 代码
 categories: 技术
 date: 2021-04-16 14:28:00
 ---
-> 通过Govmomi抓取虚拟机列表,Govmomi 是 VMware vSphere API 的 GO 库
+> Govmomi 是 VMware vSphere API 的 GO 库
 
 #### 基本思路
 先获取所有虚拟机信息，再根据虚拟机所属集群分类，但实际操作中并未在虚拟机信息中查找到所属集群信息。  
@@ -61,6 +61,18 @@ func NewVmsHosts() *VmsHosts {
 		VmsHosts: make([]VmsHost, 10),
 	}
 }
+
+// 虚拟机表
+type Vm struct {
+	gorm.Model
+	Uuid string `gorm:"type:varchar(40);not null;unique;comment:'虚拟机id'"`
+	Vc   string `gorm:"type:varchar(30);comment:'Vcenter Ip'"`
+	Esxi string `gorm:"type:varchar(30);comment:'Esxi Id'"`
+	Name string `gorm:"type:varchar(90);comment:'Vm名字'"`
+	Ip   string `gorm:"type:varchar(20);comment:'Vm ip'"`
+	PowerState string  `gorm:"type:varchar(20);comment:'Vm state'"`
+}
+
 // AddHost 新增主机
 func (vmshosts *VmsHosts) AddHost(name string, ip string) {
 	host := &VmsHost{name, ip}
@@ -113,13 +125,6 @@ func GetVms(client *vim25.Client, vmshosts *VmsHosts) {
 	if err != nil {
 		panic(err)
 	}
-	//判断不生效
-	// _, err = os.Stat("./vms.csv")
-	// if os.IsExist(err) {
-	// 	fmt.Printf("\t 备份当前已存在vms.csv……\n")
-	// 	filename := "./vms_" + strconv.Itoa(int(time.Now().Unix())) + ".csv"
-	// 	os.Rename("./vms.csv", filename)
-	// }
 	// 输出虚拟机信息到csv
 	file, _ := os.OpenFile("./vms.csv", os.O_WRONLY|os.O_CREATE, os.ModePerm)
 	//防止中文乱码
@@ -134,6 +139,19 @@ func GetVms(client *vim25.Client, vmshosts *VmsHosts) {
 		w.Flush()
 	}
 	file.Close()
+	
+	// 批量插入到数据库
+	var modelVms []*Vm
+	for _, vm := range vms {
+		modelVms = append(modelVms,&Vm{
+			Uuid: vm.Summary.Config.Uuid,
+			Vc: VSPHERE_IP,
+			Esxi: vm.Summary.Runtime.Host.Value,
+			Name: vm.Summary.Config.Name,
+			Ip: vm.Summary.Guest.IpAddress,
+			PowerState: string(vm.Summary.Runtime.PowerState),
+		})
+	}
 }
 ```
 #### 参考文档
